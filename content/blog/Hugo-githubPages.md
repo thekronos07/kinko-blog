@@ -13,45 +13,88 @@ type = "post"
 
 +++
 
+#前段として
 ## Github Pagesにブログを開設してみた。
 
 別に、はてなブログでも良かったのですが、
-
 どうせ作るなら、なんか身につけたい。と思い。。。
 
-最初、Jekyllでやろうとしたが、Windowsとの相性が悪いため、
-
+最初、Jekyllでやろうとしたが、Windowsとの相性が悪いって書かれてたので、
 Hugoでやることにした。
+出来上がってから、Jekyllをchocolateyでできるみたいなので、
+「Jekyllでやりたい！」という人は試してみてはどうでしょう。
 
-テーマ一覧を見ると、Jekyllの方充実してると思う。
-
+テーマ一覧を見ると、Jekyllの方が充実してると思う。
 Hugoテーマリスト：
-
 https://themes.gohugo.io/
 
 jekyllテーマリスト ：
-
 http://jekyllthemes.org/
-
 Hugoはデザイン的に、なんだかイケてないというか・・・。ｗ
 
-というわけで、早速インストールした手順をざっくり紹介していきます。
+#Hugoとは？
+・golangで作られた静的ジェネレーター
+・他のツールのように、デプロイコマンドがない
+・HTML/CSSを出力する動作が早い
+かなりざっくりですが。
 
-きっかけはこれ。
+#メリット
+・ワードプレスのようなログインがない
+・テーマの自由度
+・記事作成後にコマンド一回叩けば本番反映される
+・Github Pagesを使ってるので無料
+・デフォルトのドメインであれば、SSL化されてる
+などなどｗ
 
+#環境
+・Windows7 64bit
+・git
+・chocolatey
+・ターミナルはbash
+
+#まず、環境構築
+では、早速インストールした手順をざっくり紹介していきます。
+Hugoを使うきっかけはこれ。
 https://onoxeve.com/posts/hugo-on-github-pages/
 
+上記の記事内では、Homebrewを紹介しているが、WindowsではHomebrewを使えないため、
+この記事では、Windowsを使っている人向けになります。
+Homebrewの代わりとなるchocolateyをコマンドプロンプトから入れた。
+```
 
-しかし、WindowsではHomebrewを使えないため、chocolateyをコマンドプロンプトから入れた。
-
+## 下記のコマンドをコピペで入力。
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
+参考URL：https://chocolatey.org/install#installing-chocolatey
 インストール後、VS codeの再起動を行い、ターミナルでchocolateyコマンドを叩けば、VS codeでも使えることがわかる。
 
-https://chocolatey.org/install#installing-chocolatey
+
+#Hugoを入れる
+chocolateyコマンドが使えるのを確認後、
+```
+# 上記の工程が完了したら、ターミナルで下記コマンドを叩いてください。
+$ choco install hugo
+```
+
+hugoのインストールが完了したら
+ターミナルでgit管理するディレクトリを作成していきます。
+```
+
+##「blog」の部分は、ディレクトリ名になるので任意で
+$ mkdir blog
+
+## 現在いる階層の全ディレクトリを表示
+## 表示された一覧の中にblogがあれば作成完了です。
+$ ls -la
+
+## 作成されたのが確認できたら、
+$cd blog /* 作成したディレクトリに入ります。 */
+
+```
 
 あとは好きなテーマを選択して
-
-pullして指定の場所にファイルを移動すれば、おｋ
-
+themeの中にgit clone し、
+cloneしたファイルの一部を指定のディレクトリにコピペしていく。
 移動が完了したら、hugoのコマンドたたけば表示される
 
 例:

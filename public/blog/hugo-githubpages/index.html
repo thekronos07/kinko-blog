@@ -24,7 +24,7 @@
         "datePublished": "2014-09-28 00:00:00 &#43;0000 UTC",
         "dateModified" : "2014-09-28 00:00:00 &#43;0000 UTC",
         "url" : "https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/",
-        "wordCount" : "40",
+        "wordCount" : "111",
         "keywords" : [ "hugo","Blog" ]
     }
     </script>
@@ -83,7 +83,7 @@
 
 <meta itemprop="datePublished" content="2014-09-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2014-09-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="40">
+<meta itemprop="wordCount" content="111">
 
 
 
@@ -521,6 +521,9 @@
 
 
   
+  
+    
+  
 
 
         
@@ -528,7 +531,7 @@
         
 
         <a href="https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/" class="image featured">
-            <img src="https://thekronos07.github.io/kinko-blog/img//pic03.jpg" alt="">
+            <img src="https://thekronos07.github.io/kinko-blog/img/2014/09/pic03.jpg" alt="">
         </a>
     
 
@@ -536,45 +539,90 @@
   <div id="content">
     
 
+<p>#前段として</p>
+
 <h2 id="github-pagesにブログを開設してみた">Github Pagesにブログを開設してみた。</h2>
 
-<p>別に、はてなブログでも良かったのですが、</p>
+<p>別に、はてなブログでも良かったのですが、
+どうせ作るなら、なんか身につけたい。と思い。。。</p>
 
-<p>どうせ作るなら、なんか身につけたい。と思い。。。</p>
+<p>最初、Jekyllでやろうとしたが、Windowsとの相性が悪いって書かれてたので、
+Hugoでやることにした。
+出来上がってから、Jekyllをchocolateyでできるみたいなので、
+「Jekyllでやりたい！」という人は試してみてはどうでしょう。</p>
 
-<p>最初、Jekyllでやろうとしたが、Windowsとの相性が悪いため、</p>
+<p>テーマ一覧を見ると、Jekyllの方が充実してると思う。
+Hugoテーマリスト：
+<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
 
-<p>Hugoでやることにした。</p>
+<p>jekyllテーマリスト ：
+<a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a>
+Hugoはデザイン的に、なんだかイケてないというか・・・。ｗ</p>
 
-<p>テーマ一覧を見ると、Jekyllの方充実してると思う。</p>
+<p>#Hugoとは？
+・golangで作られた静的ジェネレーター
+・他のツールのように、デプロイコマンドがない
+・HTML/CSSを出力する動作が早い
+かなりざっくりですが。</p>
 
-<p>Hugoテーマリスト：</p>
+<p>#メリット
+・ワードプレスのようなログインがない
+・テーマの自由度
+・記事作成後にコマンド一回叩けば本番反映される
+・Github Pagesを使ってるので無料
+・デフォルトのドメインであれば、SSL化されてる
+などなどｗ</p>
 
-<p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
+<p>#環境
+・Windows7 64bit
+・git
+・chocolatey
+・ターミナルはbash</p>
 
-<p>jekyllテーマリスト ：</p>
+<p>#まず、環境構築
+では、早速インストールした手順をざっくり紹介していきます。
+Hugoを使うきっかけはこれ。
+<a href="https://onoxeve.com/posts/hugo-on-github-pages/">https://onoxeve.com/posts/hugo-on-github-pages/</a></p>
 
-<p><a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a></p>
+<p>上記の記事内では、Homebrewを紹介しているが、WindowsではHomebrewを使えないため、
+この記事では、Windowsを使っている人向けになります。
+Homebrewの代わりとなるchocolateyをコマンドプロンプトから入れた。</p>
 
-<p>Hugoはデザイン的に、なんだかイケてないというか・・・。ｗ</p>
+<pre><code>
+## 下記のコマンドをコピペで入力。
+@&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &quot;iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))&quot; &amp;&amp; SET &quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;
+</code></pre>
 
-<p>というわけで、早速インストールした手順をざっくり紹介していきます。</p>
+<p>参考URL：<a href="https://chocolatey.org/install#installing-chocolatey">https://chocolatey.org/install#installing-chocolatey</a>
+インストール後、VS codeの再起動を行い、ターミナルでchocolateyコマンドを叩けば、VS codeでも使えることがわかる。</p>
 
-<p>きっかけはこれ。</p>
+<p>#Hugoを入れる
+chocolateyコマンドが使えるのを確認後、</p>
 
-<p><a href="https://onoxeve.com/posts/hugo-on-github-pages/">https://onoxeve.com/posts/hugo-on-github-pages/</a></p>
+<pre><code># 上記の工程が完了したら、ターミナルで下記コマンドを叩いてください。
+$ choco install hugo
+</code></pre>
 
-<p>しかし、WindowsではHomebrewを使えないため、chocolateyをコマンドプロンプトから入れた。</p>
+<p>hugoのインストールが完了したら
+ターミナルでgit管理するディレクトリを作成していきます。</p>
 
-<p>インストール後、VS codeの再起動を行い、ターミナルでchocolateyコマンドを叩けば、VS codeでも使えることがわかる。</p>
+<pre><code>
+##「blog」の部分は、ディレクトリ名になるので任意で
+$ mkdir blog
 
-<p><a href="https://chocolatey.org/install#installing-chocolatey">https://chocolatey.org/install#installing-chocolatey</a></p>
+## 現在いる階層の全ディレクトリを表示
+## 表示された一覧の中にblogがあれば作成完了です。
+$ ls -la
 
-<p>あとは好きなテーマを選択して</p>
+## 作成されたのが確認できたら、
+$cd blog /* 作成したディレクトリに入ります。 */
 
-<p>pullして指定の場所にファイルを移動すれば、おｋ</p>
+</code></pre>
 
-<p>移動が完了したら、hugoのコマンドたたけば表示される</p>
+<p>あとは好きなテーマを選択して
+themeの中にgit clone し、
+cloneしたファイルの一部を指定のディレクトリにコピペしていく。
+移動が完了したら、hugoのコマンドたたけば表示される</p>
 
 <p>例:</p>
 
