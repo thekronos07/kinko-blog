@@ -537,21 +537,39 @@ $ mkdir blog
 $ ls -la
 
 ## 作成されたのが確認できたら、
-$cd blog /* 作成したディレクトリに入ります。 */
+## 下記、コマンドで作成したディレクトリに入ります。
+$cd blog
+
+
+# Hugoのテーマを入れる
 
 </code></pre>
 
 <p>あとは好きなテーマを選択して
-themeの中にgit clone し、
-cloneしたファイルの一部を指定のディレクトリにコピペしていく。
-移動が完了したら、hugoのコマンドたたけば表示される</p>
+「Download」クリックして、
+githubの「Clone or download」をクリック。
+出てきたURLをコピー。</p>
+
+<p>ターミナルで、themeの中に入り、</p>
+
+<pre><code>$ cd theme
+$ git clone https://github.com/jpescador/hugo-future-imperfect.git
+</code></pre>
+
+<p>cloneしたファイルの一部を指定のディレクトリにコピペしていく。</p>
+
+<p>こちらを参考にしてください。</p>
+
+<p><a href="https://qiita.com/bake0937/items/e0914efbd9434be474a4#examplesite%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC">https://qiita.com/bake0937/items/e0914efbd9434be474a4#examplesite%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC</a></p>
+
+<p>移動が完了したら、hugoのコマンドたたけば表示される</p>
 
 <p>例:</p>
 
 <pre><code>## build 本番公開用
 $ hugo
 
-## Watch　ローカル用
+## Watch　ローカル用　※ローカルで確認するならこれ
 $ hugo server
 </code></pre>
 

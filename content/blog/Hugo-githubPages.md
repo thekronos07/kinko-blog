@@ -102,6 +102,7 @@ Homebrewの代わりとなるchocolateyをコマンドプロンプトから入�
 
 
 # Hugoを入れる
+
 chocolateyコマンドが使えるのを確認後、
 ```
 # 上記の工程が完了したら、ターミナルで下記コマンドを叩いてください。
@@ -120,13 +121,31 @@ $ mkdir blog
 $ ls -la
 
 ## 作成されたのが確認できたら、
-$cd blog /* 作成したディレクトリに入ります。 */
+## 下記、コマンドで作成したディレクトリに入ります。
+$cd blog
+
+
+# Hugoのテーマを入れる
 
 ```
 
 あとは好きなテーマを選択して
-themeの中にgit clone し、
+「Download」クリックして、
+githubの「Clone or download」をクリック。
+出てきたURLをコピー。
+
+ターミナルで、themeの中に入り、
+```
+$ cd theme
+$ git clone https://github.com/jpescador/hugo-future-imperfect.git
+```
+
 cloneしたファイルの一部を指定のディレクトリにコピペしていく。
+
+こちらを参考にしてください。
+
+https://qiita.com/bake0937/items/e0914efbd9434be474a4#examplesite%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC
+
 移動が完了したら、hugoのコマンドたたけば表示される
 
 例:
@@ -135,7 +154,7 @@ cloneしたファイルの一部を指定のディレクトリにコピペして
 ## build 本番公開用
 $ hugo
 
-## Watch　ローカル用
+## Watch　ローカル用　※ローカルで確認するならこれ
 $ hugo server
 ```
 
