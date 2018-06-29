@@ -142,8 +142,9 @@ $ git clone https://github.com/jpescador/hugo-future-imperfect.git
 cloneしたファイルの一部を指定のディレクトリにコピペしていく。
 
 こちらを参考にしてください。
-
-https://goo.gl/L6bnDV
+```
+https://qiita.com/bake0937/items/e0914efbd9434be474a4#examplesite%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC
+```
 
 移動が完了したら、hugoのコマンドたたけば表示される
 
@@ -159,11 +160,12 @@ $ hugo server
 
 
 ## 入れたHugoのテーマをカスタムする
-gitにあげる時にこことか参考になりました。
-
-http://blog.syati.info/post/create_hugo_2/
-
-詳細は、ぐぐってください。
-
-これから色々いじっていきます
-
+サイト名などをいじっていきましょう。
+基本的に、config.tomlのファイルをいじるので、
+下記のリンク先を参考にしていじってみてもいいと思います。
+まぁ、ぐぐればこの辺のことは大体出てきますので。
+```
+https://qiita.com/bake0937/items/e0914efbd9434be474a4#%E3%82%AC%E3%83%81%E3%83%A3%E3%82%AC%E3%83%81%E3%83%A3%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B
+```
+長いので、今回はこの辺で。
+ありがとうございました。
