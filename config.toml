@@ -153,7 +153,7 @@ canonifyURLs = true
 # and socialAppearAtBottom.
 [social]
   # Coding Communities
-  github           = "https://github.com/thekronos07/"
+  github           = "thekronos07"
   # gitlab           = ""
   # stackoverflow    = "" # User Number
   # bitbucket        = ""
