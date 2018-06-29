@@ -17,48 +17,80 @@ type = "post"
 ## Github Pagesにブログを開設してみた。
 
 別に、はてなブログでも良かったのですが、
+
 どうせ作るなら、なんか身につけたい。と思い。。。
 
+
 最初、Jekyllでやろうとしたが、Windowsとの相性が悪いって書かれてたので、
+
 Hugoでやることにした。
+
 出来上がってから、Jekyllをchocolateyでできるみたいなので、
+
 「Jekyllでやりたい！」という人は試してみてはどうでしょう。
 
+
 テーマ一覧を見ると、Jekyllの方が充実してると思う。
+
 Hugoテーマリスト：
+
 https://themes.gohugo.io/
 
+
 jekyllテーマリスト ：
+
 http://jekyllthemes.org/
+
 Hugoはデザイン的に、なんだかイケてないというか・・・。ｗ
 
+
 ###Hugoとは？
+
 ・golangで作られた静的ジェネレーター
+
 ・他のツールのように、デプロイコマンドがない
+
 ・HTML/CSSを出力する動作が早い
+
 かなりざっくりですが。
 
 ###メリット
+
 ・ワードプレスのようなログインがない
+
 ・テーマの自由度
+
 ・記事作成後にコマンド一回叩けば本番反映される
+
 ・Github Pagesを使ってるので無料
+
 ・デフォルトのドメインであれば、SSL化されてる
+
 などなどｗ
 
 ###環境
+
 ・Windows7 64bit
+
 ・git
+
 ・chocolatey
+
 ・ターミナルはbash
 
 ###まず、環境構築
+
 では、早速インストールした手順をざっくり紹介していきます。
+
 Hugoを使うきっかけはこれ。
+
 https://onoxeve.com/posts/hugo-on-github-pages/
 
+
 上記の記事内では、Homebrewを紹介しているが、WindowsではHomebrewを使えないため、
+
 この記事では、Windowsを使っている人向けになります。
+
 Homebrewの代わりとなるchocolateyをコマンドプロンプトから入れた。
 ```
 
