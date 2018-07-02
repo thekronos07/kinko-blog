@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on フロントエンド異世界物語</title>
+    <link>https://thekronos07.github.io/kinko-blog/categories/github/</link>
+    <description>Recent content in Github on フロントエンド異世界物語</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 02 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://thekronos07.github.io/kinko-blog/categories/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【前編】Hugo &#43; Github Pagesで作ってみた</title>
+      <link>https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/</link>
+      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/</guid>
+      <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
+最初、Jekyllでやろうとしましたが、Windowsとの相性が悪いって書かれてたので、
+Hugoでやることに。
+出来上がってから、Jekyllをchocolateyでできるっぽいことを知ったのですが、 もう作ってしまったものはしょうがないので、
+「Jekyllでやりたい！」という人は試してみてはどうでしょう。
+テーマ一覧を見ると、Jekyllの方が充実してると思う。
+Hugoテーマリスト：
+https://themes.gohugo.io/
+jekyllテーマリスト ：
+http://jekyllthemes.org/
+Hugoはデザイン的に、なんだかイケてないというか・・・。ｗ
+Hugoとは？ ・golangで作られた静的ジェネレーター
+・他のツールのように、デプロイコマンドがない
+・HTML/CSSを出力する動作が早い
+かなりざっくりですが。
+メリット ・ワードプレスのようなログインがない
+・テーマの自由度
+・記事作成後にコマンド一回叩けば本番反映される
+・Github Pagesを使ってるので無料
+・デフォルトのドメインであれば、SSL化されてる
+などなどｗ
+環境 ・Windows7 64bit
+・git
+・chocolatey
+・ターミナルはbash
+まず、環境構築 では、早速インストールした手順をざっくり紹介していきます。
+Hugoを使うきっかけはこれ。
+https://onoxeve.com/posts/hugo-on-github-pages/
+上記の記事内では、Homebrewを紹介しているが、WindowsではHomebrewを使えないため、
+この記事では、Windowsを使っている人向けになります。
+Homebrewの代わりとなるchocolateyをコマンドプロンプトから入れた。
+ ## 下記のコマンドをコピペで入力。 @&amp;quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;quot;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&amp;quot; &amp;amp;&amp;amp; SET &amp;quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;quot;  参考URL：https://chocolatey.org/install#installing-chocolatey インストール後、VS codeの再起動を行い、ターミナルでchocolateyコマンドを叩けば、VS codeでも使えることがわかる。
+Hugoを入れる chocolateyコマンドが使えるのを確認後、
+# 上記の工程が完了したら、ターミナルで下記コマンドを叩いてください。 $ choco install hugo  hugoのインストールが完了したら ターミナルでgit管理するディレクトリを作成していきます。</description>
+    </item>
+    
+  </channel>
+</rss>
