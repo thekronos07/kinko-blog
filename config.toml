@@ -136,11 +136,11 @@ canonifyURLs = true
 #  identifier = "fa fa-list"
 #  weight = 4
 
-[[menu.main]]
-  name = "カテゴリー"
-  url = "/categories/"
-  identifier = "fa fa-sitemap"
-  weight = 5
+#[[menu.main]]
+#  name = "カテゴリー"
+#  url = "/categories/"
+#  identifier = "fa fa-sitemap"
+#  weight = 5
 
 [[menu.main]]
   name = "問合せ"
