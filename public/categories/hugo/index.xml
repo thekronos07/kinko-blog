@@ -12,9 +12,24 @@
     
     
     <item>
+      <title>【後編】Hugo &#43; Github Pagesで作ってみた</title>
+      <link>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <description>Github Pagesにブログを開設してみた。 ブログの基本設定をカスタムしてみる。 私がいじった設定は、主にconfig.tomlのSNSシェアボタンの表示・非表示設定や、 アイコンなどの設定、サイトのタイトル名などを変更してあります。
+あまりボタンが多すぎても邪魔くさいと感じてしまう人間なので、かなり削ってる方だと思います。
+サイトをローカルで見てみる カスタムしていると、「どこが、どんな風に変わったのか」がわからないので、 ローカルサーバーを立てて確認したいと思います。 ターミナルを開いて、下記コマンドをblogディレクトリ内で叩いてみましょう。
+$ hugo server Building sites … | EN +------------------+----+ Pages | 31 Paginator pages | 1 Non-page files | 0 Static files | 35 Processed images | 0 Aliases | 7 Sitemaps | 1 Cleaned | 0  コマンドを実行すると、「Building sites …」といった感じで、 ローカルサーバーが立ちます。 localhost:1313/で見れるかと思います。 問題なければ、本番反映しましょう。
+$ ./deploy.sh # このコマンドだけ叩けば、本番反映されます。  Google Analyticsを設定する Downloadしたテーマにもよりますが、 config.tomlの最初の方に
+googleAnalytics = &amp;quot;&amp;quot;  という項目ありますので、
+googleAnalytics = &amp;quot;UA-000000-1&amp;quot;  と、ご自身のUAから始まるものをいれてビルドしてあげるだけです。</description>
+    </item>
+    
+    <item>
       <title>【前編】Hugo &#43; Github Pagesで作ってみた</title>
       <link>https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
-      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
@@ -51,21 +66,6 @@ Homebrewの代わりとなるchocolateyをコマンドプロンプトから入�
  ## 下記のコマンドをコピペで入力。 @&amp;quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;quot;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&amp;quot; &amp;amp;&amp;amp; SET &amp;quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;quot;  参考URL：https://chocolatey.org/install#installing-chocolatey インストール後、VS codeの再起動を行い、ターミナルでchocolateyコマンドを叩けば、VS codeでも使えることがわかる。
 Hugoを入れる chocolateyコマンドが使えるのを確認後、
 # 上記の工程が完了したら、ターミナルで下記コマンドを叩いてください。 $ choco install hugo  hugoのインストールが完了したら ターミナルでgit管理するディレクトリを作成していきます。</description>
-    </item>
-    
-    <item>
-      <title>【後編】Hugo &#43; Github Pagesで作ってみた</title>
-      <link>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F.1/</link>
-      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F.1/</guid>
-      <description>Github Pagesにブログを開設してみた。 ブログの基本設定をカスタムしてみる。 私がいじった設定は、主にconfig.tomlのSNSシェアボタンの表示・非表示設定や、 アイコンなどの設定、サイトのタイトル名などを変更してあります。
-あまりボタンが多すぎても邪魔くさいと感じてしまう人間なので、かなり削ってる方だと思います。
-サイトをローカルで見てみる カスタムしていると、「どこが、どんな風に変わったのか」がわからないので、 ローカルサーバーを立てて確認したいと思います。 ターミナルを開いて、下記コマンドをblogディレクトリ内で叩いてみましょう。
-$ hugo server Building sites … | EN +------------------+----+ Pages | 31 Paginator pages | 1 Non-page files | 0 Static files | 35 Processed images | 0 Aliases | 7 Sitemaps | 1 Cleaned | 0  コマンドを実行すると、「Building sites …」といった感じで、 ローカルサーバーが立ちます。 localhost:1313/で見れるかと思います。 問題なければ、本番反映しましょう。
-$ ./deploy.sh # このコマンドだけ叩けば、本番反映されます。  Google Analyticsを設定する Downloadしたテーマにもよりますが、 config.tomlの最初の方に
-googleAnalytics = &amp;quot;&amp;quot;  という項目ありますので、
-googleAnalytics = &amp;quot;UA-000000-1&amp;quot;  と、ご自身のUAから始まるものをいれてビルドしてあげるだけです。</description>
     </item>
     
   </channel>
