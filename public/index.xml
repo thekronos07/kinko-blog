@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>フロントエンド異世界物語</title>
-    <link>http://kinko25-frontend.jp/</link>
+    <link>https://thekronos07.github.io/kinko-blog/</link>
     <description>Recent content on フロントエンド異世界物語</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 02 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://kinko25-frontend.jp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://thekronos07.github.io/kinko-blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>【前編】Hugo &#43; Github Pagesで作ってみた</title>
-      <link>http://kinko25-frontend.jp/blog/hugo-githubpages/</link>
+      <link>https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25-frontend.jp/blog/hugo-githubpages/</guid>
+      <guid>https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/</guid>
       <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
 最初、Jekyllでやろうとしましたが、Windowsとの相性が悪いって書かれてたので、
 Hugoでやることに。
@@ -55,37 +55,37 @@ Hugoを入れる chocolateyコマンドが使えるのを確認後、
     
     <item>
       <title>Fancy App 1</title>
-      <link>http://kinko25-frontend.jp/itemized/item1/</link>
+      <link>https://thekronos07.github.io/kinko-blog/itemized/item1/</link>
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25-frontend.jp/itemized/item1/</guid>
+      <guid>https://thekronos07.github.io/kinko-blog/itemized/item1/</guid>
       <description> App 1 </description>
     </item>
     
     <item>
       <title>Fancy App 2</title>
-      <link>http://kinko25-frontend.jp/itemized/item2/</link>
+      <link>https://thekronos07.github.io/kinko-blog/itemized/item2/</link>
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25-frontend.jp/itemized/item2/</guid>
+      <guid>https://thekronos07.github.io/kinko-blog/itemized/item2/</guid>
       <description> App 2 </description>
     </item>
     
     <item>
       <title>Fancy App 3</title>
-      <link>http://kinko25-frontend.jp/itemized/item3/</link>
+      <link>https://thekronos07.github.io/kinko-blog/itemized/item3/</link>
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25-frontend.jp/itemized/item3/</guid>
+      <guid>https://thekronos07.github.io/kinko-blog/itemized/item3/</guid>
       <description> App 3 </description>
     </item>
     
     <item>
       <title>Fancy App 4</title>
-      <link>http://kinko25-frontend.jp/itemized/item4/</link>
+      <link>https://thekronos07.github.io/kinko-blog/itemized/item4/</link>
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25-frontend.jp/itemized/item4/</guid>
+      <guid>https://thekronos07.github.io/kinko-blog/itemized/item4/</guid>
       <description> App 4 </description>
     </item>
     
