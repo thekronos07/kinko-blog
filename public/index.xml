@@ -54,6 +54,21 @@ Hugoを入れる chocolateyコマンドが使えるのを確認後、
     </item>
     
     <item>
+      <title>【後編】Hugo &#43; Github Pagesで作ってみた</title>
+      <link>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F.1/</link>
+      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F.1/</guid>
+      <description>Github Pagesにブログを開設してみた。 ブログの基本設定をカスタムしてみる。 私がいじった設定は、主にconfig.tomlのSNSシェアボタンの表示・非表示設定や、 アイコンなどの設定、サイトのタイトル名などを変更してあります。
+あまりボタンが多すぎても邪魔くさいと感じてしまう人間なので、かなり削ってる方だと思います。
+サイトをローカルで見てみる カスタムしていると、「どこが、どんな風に変わったのか」がわからないので、 ローカルサーバーを立てて確認したいと思います。 ターミナルを開いて、下記コマンドをblogディレクトリ内で叩いてみましょう。
+$ hugo server Building sites … | EN +------------------+----+ Pages | 31 Paginator pages | 1 Non-page files | 0 Static files | 35 Processed images | 0 Aliases | 7 Sitemaps | 1 Cleaned | 0  コマンドを実行すると、「Building sites …」といった感じで、 ローカルサーバーが立ちます。 localhost:1313/で見れるかと思います。 問題なければ、本番反映しましょう。
+$ ./deploy.sh # このコマンドだけ叩けば、本番反映されます。  Google Analyticsを設定する Downloadしたテーマにもよりますが、 config.tomlの最初の方に
+googleAnalytics = &amp;quot;&amp;quot;  という項目ありますので、
+googleAnalytics = &amp;quot;UA-000000-1&amp;quot;  と、ご自身のUAから始まるものをいれてビルドしてあげるだけです。</description>
+    </item>
+    
+    <item>
       <title>Fancy App 1</title>
       <link>https://thekronos07.github.io/kinko-blog/itemized/item1/</link>
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>

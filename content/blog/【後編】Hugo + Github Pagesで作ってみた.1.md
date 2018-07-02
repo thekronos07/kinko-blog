@@ -2,7 +2,7 @@
 author = "kinko25"
 categories = ["Hugo","Github","Github Pages"]
 tags = ["hugo"]
-date = "2018-07-03"
+date = "2018-07-02"
 description = "Github Pagesにブログを開設してみた。"
 featured = "pic01.png"
 featuredalt = "Pic 1"
@@ -42,108 +42,72 @@ Building sites …
 コマンドを実行すると、「Building sites …」といった感じで、
 ローカルサーバーが立ちます。
 localhost:1313/で見れるかと思います。
-
-## 
-
-
-## 環境
-
-・Windows7 64bit
-
-・git
-
-・chocolatey
-
-・ターミナルはbash
-
-## まず、環境構築
-
-では、早速インストールした手順をざっくり紹介していきます。
-
-Hugoを使うきっかけはこれ。
-
-https://onoxeve.com/posts/hugo-on-github-pages/
-
-
-上記の記事内では、Homebrewを紹介しているが、WindowsではHomebrewを使えないため、
-
-この記事では、Windowsを使っている人向けになります。
-
-Homebrewの代わりとなるchocolateyをコマンドプロンプトから入れた。
+問題なければ、本番反映しましょう。
+```
+$ ./deploy.sh # このコマンドだけ叩けば、本番反映されます。
 ```
 
-## 下記のコマンドをコピペで入力。
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+## Google Analyticsを設定する
+Downloadしたテーマにもよりますが、
+config.tomlの最初の方に
 ```
-参考URL：https://chocolatey.org/install#installing-chocolatey
-インストール後、VS codeの再起動を行い、ターミナルでchocolateyコマンドを叩けば、VS codeでも使えることがわかる。
-
-
-## Hugoを入れる
-
-chocolateyコマンドが使えるのを確認後、
+googleAnalytics = ""
 ```
-# 上記の工程が完了したら、ターミナルで下記コマンドを叩いてください。
-$ choco install hugo
+という項目ありますので、
 ```
-
-hugoのインストールが完了したら
-ターミナルでgit管理するディレクトリを作成していきます。
+googleAnalytics = "UA-000000-1"
 ```
+と、ご自身のUAから始まるものをいれてビルドしてあげるだけです。
 
-##「blog」の部分は、ディレクトリ名になるので任意で
-$ mkdir blog
+もし、「そんなのなーい＞＜」という方は、
 
-## 現在いる階層の全ディレクトリを表示
-## 表示された一覧の中にblogがあれば作成完了です。
-$ ls -la
+こちらを参考にしてみてください。
 
-## 作成されたのが確認できたら、
-## 下記、コマンドで作成したディレクトリに入ります。
-$cd blog
+下記リンク先のやり方であれば、アドセンスのタグ設置も容易だと思います。
 
-```
-
-## Hugoのテーマを入れる
-
-あとは好きなテーマを選択して
-「Download」クリックして、
-githubの「Clone or download」をクリック。
-出てきたURLをコピー。
-
-ターミナルで、themeの中に入り、
-```
-$ cd theme
-$ git clone https://github.com/jpescador/hugo-future-imperfect.git
-```
-
-cloneしたファイルの一部を指定のディレクトリにコピペしていく。
-
-こちらを参考にしてください。
-```
-https://qiita.com/bake0937/items/e0914efbd9434be474a4#examplesite%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC
-```
-
-移動が完了したら、hugoのコマンドたたけば表示される
-
-例:
-
-```
-## build 本番公開用
-$ hugo
-
-## Watch　ローカル用　※ローカルで確認するならこれ
-$ hugo server
-```
+https://bash-prompt.net/guides/custom-html-jugo/
 
 
-## 入れたHugoのテーマをカスタムする
-サイト名などをいじっていきましょう。
-基本的に、config.tomlのファイルをいじるので、
-下記のリンク先を参考にしていじってみてもいいと思います。
-まぁ、ぐぐればこの辺のことは大体出てきますので。
-```
-https://qiita.com/bake0937/items/e0914efbd9434be474a4#%E3%82%AC%E3%83%81%E3%83%A3%E3%82%AC%E3%83%81%E3%83%A3%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B
-```
+## Google Adsense対応方法
+アドセンスを利用するには、独自ドメインが必須。
+
+githubのsettingのページでできちゃうのかなって思ったのですが、
+
+出来なかったので、お名前.comなどでドメインを契約してください。
+
+ドメインをゲットしたら、そのドメイン名をgithubのsetting画面に登録すれば、ドメイン変更は完了です。
+
+
+## 独自ドメインをSSL化する
+今月の20日くらいにSSL化しないとChromeで見れなくなってしまうようなので、
+
+対応しようとしてましたが、SSL対応まだしておりません。※7月2日時点
+
+SSL化対応するには、色々やり方があると思いますが、
+どうせなら無料がいいですよね。
+CloudFlareというサービスがあるので、
+これでSSL対応が可能のようです。
+
+ただ、今年に入ってからgithubが独自ドメインに対してもSSL化対応をしてくれるみたいな記事をちらほら。
+おそらく全体にまで追いついていない様子。
+
+SSL対応はどこでもいいが、しておいたほう良さそうですね。
+
+## 最後に
+ここまで構築できたら、あとはコンテンツを増やしながら、
+
+色々カスタムしていけるので、ワクワクしますし、
+技術的な面でも色々勉強になります。
+
+1個サイトを作るだけで、得られるものは多いと思います。
+
+ぜひ、この機会に触れてみてはいかがでしょうか？
+
+ちなみに、1年ぶりにほったらかしにしていたアドセンスを見たら、
+
+136円の収益が発生しておりましたｗ
+
+早くドメインを取得してアドセンス貼りたいですなぁ
+
 長いので、今回はこの辺で。
 ありがとうございました。
