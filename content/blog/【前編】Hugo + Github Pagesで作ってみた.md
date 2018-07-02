@@ -158,8 +158,98 @@ $ hugo
 $ hugo server
 ```
 
+## githubにSSH公開鍵を登録する。
+実際、私はここで少しだけ詰まってましたｗ
+本番公開する際に、必要になってくるので、
+登録しておいてください。
 
-## 入れたHugoのテーマをカスタムする
+下記、リンク先を参考にしていただければ、うまく行きます。
+
+gitHubでssh接続する手順~公開鍵・秘密鍵の生成から~ 
+
+https://qiita.com/shizuma/items/2b2f873a0034839e47ce
+
+
+## blogディレクトリをgit管理する
+
+```
+$ git init #blogディレクトリ内で、このコマンドを実行。
+$ git remote add origin git@github.com:ユーザー名/リポジトリ名.git # remoteのリポジトリを設定する
+$ git pull origin master
+$
+$ rm -rf public # このディレクトリは git subtree を利用して管理するので削除
+$ git add -A
+$ git commit -m "Add hugo template"
+$ git push origin master
+```
+上記のコマンドをコピペでいけます。
+※コメントは消してくださいね。
+
+## gh-pagesブランチを作成する
+
+```
+$ git checkout --orphan gh-pages   # orphan ブランチ 作成
+$ git rm --cached $(git ls-files)  # 要らないので、全て管理対象からすべて外す
+$ git add README.md                # README.md だけいれておく
+$ git commit -m "initial commit on gh-pages branch"
+$ git push origin gh-pages
+
+$ git checkout master
+$ git subtree add --prefix=public git@github.com:ユーザー名/リポジトリ名.git gh-pages --squash
+$ git subtree pull --prefix=public git@github.com:ユーザー名/リポジトリ名.git gh-pages
+
+$ hugo # buildします
+$ git add -A
+$ git commit -m "Updating site"
+$ git push origin master
+$ git subtree push --prefix=public git@github.com:ユーザー名/リポジトリ名.git gh-pages
+```
+
+## 更新を自動化する
+./blog/の階層で
+```
+touch deploy.sh
+deploy.sh　←これをエディターで開いてください。
+```
+
+開いたら、下記の内容をコピペして保存。
+```
+# !/bin/bash
+
+echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+
+# Build the project. 
+hugo
+
+# Add changes to git.
+git add -A
+
+# Commit changes.
+msg="rebuilding site `date`"
+if [ $# -eq 1 ]
+  then msg="$1"
+fi
+git commit -m "$msg"
+
+# Push source and build repos.
+git push origin master
+git subtree push --prefix=public git@github.com:[username]/yourblog.git gh-pages
+```
+上記の内容を保存したら、
+下記のコマンドを実行してリモートのリポジトリに反映する
+```
+$ chmod +x deploy.sh
+$ ./deploy.sh
+```
+
+これが完了したら
+```
+https://ユーザー名.github.io/リポジトリ名/
+```
+で、ちゃんと開けば、本番反映成功です。
+
+
+## Hugoのテーマをカスタムする
 サイト名などをいじっていきましょう。
 基本的に、config.tomlのファイルをいじるので、
 下記のリンク先を参考にしていじってみてもいいと思います。

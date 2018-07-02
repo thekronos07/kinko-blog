@@ -24,7 +24,7 @@
         "datePublished": "2018-07-02 00:00:00 &#43;0000 UTC",
         "dateModified" : "2018-07-02 00:00:00 &#43;0000 UTC",
         "url" : "https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/",
-        "wordCount" : "131",
+        "wordCount" : "342",
         "keywords" : [ "hugo","Blog" ]
     }
     </script>
@@ -99,7 +99,7 @@
 
 <meta itemprop="datePublished" content="2018-07-02T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="131">
+<meta itemprop="wordCount" content="342">
 
 
 
@@ -298,9 +298,6 @@ if (!doNotTrack) {
 
 
   
-  
-    
-  
 
 
         
@@ -308,7 +305,7 @@ if (!doNotTrack) {
         
 
         <a href="https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/" class="image featured">
-            <img src="https://thekronos07.github.io/kinko-blog/img/2018/07/pic01.png" alt="">
+            <img src="https://thekronos07.github.io/kinko-blog/img//pic01.png" alt="">
         </a>
     
 
@@ -405,7 +402,7 @@ if (!doNotTrack) {
             July 2, 2018</time>
         <span class="author">kinko25</span>
         
-            <p>1 minute read</p>
+            <p>2 minute read</p>
         
         
     </div>
@@ -640,7 +637,99 @@ $ hugo
 $ hugo server
 </code></pre>
 
-<h2 id="入れたhugoのテーマをカスタムする">入れたHugoのテーマをカスタムする</h2>
+<h2 id="githubにssh公開鍵を登録する">githubにSSH公開鍵を登録する。</h2>
+
+<p>実際、私はここで少しだけ詰まってましたｗ
+本番公開する際に、必要になってくるので、
+登録しておいてください。</p>
+
+<p>下記、リンク先を参考にしていただければ、うまく行きます。</p>
+
+<p>gitHubでssh接続する手順~公開鍵・秘密鍵の生成から~</p>
+
+<p><a href="https://qiita.com/shizuma/items/2b2f873a0034839e47ce">https://qiita.com/shizuma/items/2b2f873a0034839e47ce</a></p>
+
+<h2 id="blogディレクトリをgit管理する">blogディレクトリをgit管理する</h2>
+
+<pre><code>$ git init #blogディレクトリ内で、このコマンドを実行。
+$ git remote add origin git@github.com:ユーザー名/リポジトリ名.git # remoteのリポジトリを設定する
+$ git pull origin master
+$
+$ rm -rf public # このディレクトリは git subtree を利用して管理するので削除
+$ git add -A
+$ git commit -m &quot;Add hugo template&quot;
+$ git push origin master
+</code></pre>
+
+<p>上記のコマンドをコピペでいけます。
+※コメントは消してくださいね。</p>
+
+<h2 id="gh-pagesブランチを作成する">gh-pagesブランチを作成する</h2>
+
+<pre><code>$ git checkout --orphan gh-pages   # orphan ブランチ 作成
+$ git rm --cached $(git ls-files)  # 要らないので、全て管理対象からすべて外す
+$ git add README.md                # README.md だけいれておく
+$ git commit -m &quot;initial commit on gh-pages branch&quot;
+$ git push origin gh-pages
+
+$ git checkout master
+$ git subtree add --prefix=public git@github.com:ユーザー名/リポジトリ名.git gh-pages --squash
+$ git subtree pull --prefix=public git@github.com:ユーザー名/リポジトリ名.git gh-pages
+
+$ hugo # buildします
+$ git add -A
+$ git commit -m &quot;Updating site&quot;
+$ git push origin master
+$ git subtree push --prefix=public git@github.com:ユーザー名/リポジトリ名.git gh-pages
+</code></pre>
+
+<h2 id="更新を自動化する">更新を自動化する</h2>
+
+<p>./blog/の階層で</p>
+
+<pre><code>touch deploy.sh
+deploy.sh　←これをエディターで開いてください。
+</code></pre>
+
+<p>開いたら、下記の内容をコピペして保存。</p>
+
+<pre><code># !/bin/bash
+
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+# Build the project. 
+hugo
+
+# Add changes to git.
+git add -A
+
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# Push source and build repos.
+git push origin master
+git subtree push --prefix=public git@github.com:[username]/yourblog.git gh-pages
+</code></pre>
+
+<p>上記の内容を保存したら、
+下記のコマンドを実行してリモートのリポジトリに反映する</p>
+
+<pre><code>$ chmod +x deploy.sh
+$ ./deploy.sh
+</code></pre>
+
+<p>これが完了したら</p>
+
+<pre><code>https://ユーザー名.github.io/リポジトリ名/
+</code></pre>
+
+<p>で、ちゃんと開けば、本番反映成功です。</p>
+
+<h2 id="hugoのテーマをカスタムする">Hugoのテーマをカスタムする</h2>
 
 <p>サイト名などをいじっていきましょう。
 基本的に、config.tomlのファイルをいじるので、
