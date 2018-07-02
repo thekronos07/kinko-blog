@@ -13,10 +13,10 @@
     
     <item>
       <title>【前編】Hugo &#43; Github Pagesで作ってみた</title>
-      <link>https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/</link>
+      <link>https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/</guid>
+      <guid>https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
 最初、Jekyllでやろうとしましたが、Windowsとの相性が悪いって書かれてたので、
 Hugoでやることに。
