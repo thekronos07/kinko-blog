@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on フロントエンド異世界物語</title>
-    <link>http://kinko25.tech/tags/</link>
+    <link>http://kinko25-frontend.jp/tags/</link>
     <description>Recent content in Tags on フロントエンド異世界物語</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 02 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://kinko25.tech/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kinko25-frontend.jp/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo</title>
-      <link>http://kinko25.tech/tags/hugo/</link>
+      <link>http://kinko25-frontend.jp/tags/hugo/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25.tech/tags/hugo/</guid>
+      <guid>http://kinko25-frontend.jp/tags/hugo/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on フロントエンド異世界物語</title>
-    <link>http://kinko25.tech/tags/hugo/</link>
+    <link>http://kinko25-frontend.jp/tags/hugo/</link>
     <description>Recent content in Hugo on フロントエンド異世界物語</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 02 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://kinko25.tech/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kinko25-frontend.jp/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>【前編】Hugo &#43; Github Pagesで作ってみた</title>
-      <link>http://kinko25.tech/blog/hugo-githubpages/</link>
+      <link>http://kinko25-frontend.jp/blog/hugo-githubpages/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25.tech/blog/hugo-githubpages/</guid>
+      <guid>http://kinko25-frontend.jp/blog/hugo-githubpages/</guid>
       <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
 最初、Jekyllでやろうとしましたが、Windowsとの相性が悪いって書かれてたので、
 Hugoでやることに。
