@@ -2,9 +2,9 @@
 author = "kinko25"
 categories = ["Hugo"]
 tags = ["hugo"]
-date = "2014-09-28"
+date = "2018-07-02"
 description = "Github Pagesにブログを開設してみた。"
-featured = "pic03.jpg"
+featured = "pic01.png"
 featuredalt = "Pic 3"
 featuredpath = "date"
 linktitle = ""
