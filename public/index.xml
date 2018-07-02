@@ -48,16 +48,15 @@
     </item>
     
     <item>
-      <title>Hugo &#43; Github Pagesで作ってみた</title>
+      <title>【前編】Hugo &#43; Github Pagesで作ってみた</title>
       <link>https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>https://thekronos07.github.io/kinko-blog/blog/hugo-githubpages/</guid>
-      <description>前段として Github Pagesにブログを開設してみた。 別に、はてなブログでも良かったのですが、
-どうせ作るなら、なんか身につけたい。と思い。。。
-最初、Jekyllでやろうとしたが、Windowsとの相性が悪いって書かれてたので、
-Hugoでやることにした。
-出来上がってから、Jekyllをchocolateyでできるみたいなので、
+      <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
+最初、Jekyllでやろうとしましたが、Windowsとの相性が悪いって書かれてたので、
+Hugoでやることに。
+出来上がってから、Jekyllをchocolateyでできるっぽいことを知ったのですが、 もう作ってしまったものはしょうがないので、
 「Jekyllでやりたい！」という人は試してみてはどうでしょう。
 テーマ一覧を見ると、Jekyllの方が充実してると思う。
 Hugoテーマリスト：
