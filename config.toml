@@ -40,18 +40,18 @@ canonifyURLs = true
   # apple-touch-icon-precomposed.png, favicon.png, favicon.ico, and mstile.png.
   # These are stored in the favicon folder. See the following for more information:
   # https://github.com/audreyr/favicon-cheat-sheet
-  loadFavicon          = false
+  loadFavicon          = true
   faviconVersion       = ""
   # Sets Social Share links to appear on posts
   socialShare          = true
   # Sets specific share to appear on posts (default behavior is to appear)
   socialShareTwitter   = true
-  # socialShareGoogleplus = true
+  socialShareGoogleplus = false
   socialShareFacebook  = true
-  # socialShareReddit    = true
-  # socialShareLinkedin  = true
-  # socialShareStumbleupon = true
-  # socialSharePinterest = true
+  socialShareReddit    = false
+  socialShareLinkedin  = false
+  socialShareStumbleupon = false
+  socialSharePinterest = false
   socialShareEmail     = true
 
   # Load custom CSS or JavaScript files. The variable is an array so that you
