@@ -7,7 +7,7 @@ preserveTaxonomyNames = true
 paginate = 3
 #disqusShortname = "shortname"
 disqusShortname = ""
-googleAnalytics = ""
+googleAnalytics = "UA-103935601-2"
 pluralizeListTitles = false
 # Set the followings to true as part of your site SEO
 enableRobotsTXT = true
