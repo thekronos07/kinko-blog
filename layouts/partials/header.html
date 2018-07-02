@@ -21,6 +21,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {{ .Hugo.Generator }}
         {{ partial "favicon" . }}
+        <!-- {{ partial "google_ads" . }} -->
 
         {{ with .Params.author }}
             <meta name="author" content="{{ . }}">
@@ -76,6 +77,7 @@
 {{ end }}
 
       {{ template "_internal/google_analytics.html" . }}
+      {{ partial "google_analytics" . }}
     </head>
     <body>
 
