@@ -61,7 +61,8 @@
 		font-weight: 400;
 		letter-spacing: 0.25em;
 		line-height: 2.5;
-		margin: -1em 1em 0;
+		/* margin: -1em 1em 0; */
+		margin: 0 1em 0;
 		text-transform: uppercase;
 	}
 
@@ -217,8 +218,11 @@
     }
 
     #content h1 {
-				border-bottom: 2px solid #2ebaae;
-    }
+			border-bottom: 2px solid #2ebaae;
+		}
+		#content h1:first-child {
+			margin: 0;
+		}
 
 	h2 {
 		font-size: 1.1em;
@@ -1296,7 +1300,7 @@
 		padding: 3em 3em 1em 3em ;
 		background: #ffffff;
 		border: solid 1px rgba(160, 160, 160, 0.3);
-		border-radius: 12px;
+		border-radius: 8px;
 		margin: 0 0 2em 0;
 		position: relative;
 	}
@@ -1331,6 +1335,7 @@
 					font-weight: 900;
 					/* font-size: 1.5em; */
 					font-size: 1.2em;
+					margin: 0;
 				}
 
 				.post > header .title > :last-child {
@@ -2823,7 +2828,8 @@
 
 	#social-share {
    position: relative;
-	  top: -0.5em;
+	  /* top: -0.5em; */
+	  top: 0;
 	}
 
 	  #social-share ul {
