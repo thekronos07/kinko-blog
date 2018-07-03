@@ -17,7 +17,7 @@ canonifyURLs = true
   # Sets the meta tag description
   description          = "フロントエンド周りのことについて書いていきます。"
   # Sets the navbarTitle that appears in the top left of the navigation bar
-  navbarTitle          = "フロントエンド異世界物語"
+  navbarTitle          = "FBLOG"
   # Sets where "View More Posts" links
   viewMorePostLink     = "/blog/"
 
