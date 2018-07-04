@@ -932,6 +932,10 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
 		}
 
 			ul.actions li {
