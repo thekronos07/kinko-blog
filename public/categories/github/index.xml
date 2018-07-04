@@ -53,8 +53,8 @@ videoタグにmutedを追加するというだけでした。
       <guid>https://thekronos07.github.io/kinko-blog/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</guid>
       <description>GitとGithubの違いとは？ GitとGithubの違いは、なんだと思いますか？ パッと答えられる人は、普段でgitを使っているのではないだろうか。
 知らないという方は、これを機に知っておいたほうが良さそうですね。
-GitとGithubの違いとは？ Gitは、結論から言うと、ツール名。
-Githubは、結論から言うと、サービス名。
+GitとGithubの違いとは？ Gitは、結論から言うと、ツール。
+Githubは、結論から言うと、サービス。
 ちなみに、私が利用しているこのサーバーはgithubのサービスです。
 Gitとは &amp;quot;「Git」は、「ソースコードのバージョンを管理するツール」の名前。 システム開発では複数の開発者によってソースコードが書き換わります。 いつ誰がどこを変えたのか？ 最新のバージョンはどれか？ など、 ソースコードのバージョンを把握する必要があります。 このバージョン管理をするツールの1つが「Git」です。&amp;quot;  参考URL：いまさら聞けないGitとGitHubの違いって何？ https://www.i3design.jp/in-pocket/3111
 Githubとは &amp;quot;「GitHub」は、「Gitを利用した、開発者を支援するWebサービス」の名前です。 GitHubは、クラウド上でGitを用いたバージョン管理をすることができ、さらにGitには無い、 開発者に便利な機能を追加しています。いまやユーザ数は1000万人を超え、 世界中のソフトウェア開発に利用されているサービスです。&amp;quot;  参考URL：いまさら聞けないGitとGitHubの違いって何？ https://www.i3design.jp/in-pocket/3111
