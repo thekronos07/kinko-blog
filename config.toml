@@ -1,7 +1,7 @@
 baseurl = "https://thekronos07.github.io/kinko-blog/"
 #languageCode = "en-us"
 languageCode = "ja-jp"
-title = "フロントエンド異世界物語"
+title = "FE異世界物語"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
@@ -17,7 +17,7 @@ canonifyURLs = true
   # Sets the meta tag description
   description          = "フロントエンド周りのことについて書いていきます。"
   # Sets the navbarTitle that appears in the top left of the navigation bar
-  navbarTitle          = "FBLOG"
+  navbarTitle          = "FE異世界物語"
   # Sets where "View More Posts" links
   viewMorePostLink     = "/blog/"
 
