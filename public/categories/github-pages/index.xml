@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github Pages on FE異世界物語</title>
+    <link>https://thekronos07.github.io/kinko-blog/categories/github-pages/</link>
+    <description>Recent content in Github Pages on FE異世界物語</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://thekronos07.github.io/kinko-blog/categories/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chromeだけvideoタグを使った動画が再生できない問題について</title>
+      <link>https://thekronos07.github.io/kinko-blog/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thekronos07.github.io/kinko-blog/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
+      <description>videoタグで動画を扱う際に注意すること なぜかChromeだけ初期表示で動画再生がされない事件 最近、なぜかサイト内の背景動画がChromeブラウザだけ、
+動かないという問題起きていました。
+しかし、意外にも簡単に解決できたので、ご紹介したいと思います。
+Chrome以外のブラウザでは、動画再生が可能。 まず、検証して気づきました。
+FirefoxやIE11でさえ、動くのにChromeでは動かないということに。
+最初はJSなどの影響を受けてるのではないかと思い、
+調査してみましたが、何の問題もなく。。。
+リンクをコピペで飛ぶと、
+初期表示では、再生されず。
+二回目以降で再生されるという不思議なものでした。
+ググってみると 下記のサイトが参考になりました。
+Chrome最新版にて背景動画が自動再生されない事象：原因と対処方法 http://souken-blog.com/2018/05/08/chrome-movie/
+今回は、ここに記載されている
+videoタグにmutedを追加するというだけでした。
+&amp;lt;video autoplay loop muted src=&amp;quot;movie.mp4&amp;quot;&amp;gt;&amp;lt;/video&amp;gt;  背景動画で使っている動画はそもそも無音なので、
+これで解決できました。
+最後に 数ヶ月前まで再生されていたのに、再生されなくなるのは怖いですね。
+Chrome最新版にて背景動画が自動再生されない事象：原因と対処方法 http://souken-blog.com/2018/05/08/chrome-movie/
+上記のリンク先で、
+&amp;ldquo;広告動画からの音声を制限するのが主たる目的だそうです。&amp;rdquo;
+を見て「なるほどー！」と納得しました。
+今回はこの辺で。
+ありがとうございました。</description>
+    </item>
+    
+    <item>
+      <title>GitとGithubの違いについて</title>
+      <link>https://thekronos07.github.io/kinko-blog/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thekronos07.github.io/kinko-blog/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</guid>
+      <description>GitとGithubの違いとは？ GitとGithubの違いは、なんだと思いますか？ パッと答えられる人は、普段でgitを使っているのではないだろうか。
+知らないという方は、これを機に知っておいたほうが良さそうですね。
+GitとGithubの違いとは？ Gitは、結論から言うと、ツール名。
+Githubは、結論から言うと、サービス名。
+ちなみに、私が利用しているこのサーバーはgithubのサービスです。
+Gitとは &amp;quot;「Git」は、「ソースコードのバージョンを管理するツール」の名前。 システム開発では複数の開発者によってソースコードが書き換わります。 いつ誰がどこを変えたのか？ 最新のバージョンはどれか？ など、 ソースコードのバージョンを把握する必要があります。 このバージョン管理をするツールの1つが「Git」です。&amp;quot;  参考URL：いまさら聞けないGitとGitHubの違いって何？ https://www.i3design.jp/in-pocket/3111
+Githubとは &amp;quot;「GitHub」は、「Gitを利用した、開発者を支援するWebサービス」の名前です。 GitHubは、クラウド上でGitを用いたバージョン管理をすることができ、さらにGitには無い、 開発者に便利な機能を追加しています。いまやユーザ数は1000万人を超え、 世界中のソフトウェア開発に利用されているサービスです。&amp;quot;  参考URL：いまさら聞けないGitとGitHubの違いって何？ https://www.i3design.jp/in-pocket/3111
+Gitの使い方を理解しよう ググると、だいたい「サルでもわかるGit」みたいなのが出てきますが、
+ぶっちゃけわかりません！！ｗ
+個人的に、一番わかりやすいのはGithub社員の方が来日した際に、イベントの内容。
+これに自分も参加していたのですが、本当にわかりやすかったですねー。
+かなり長めの動画なので、時間がある時にみながらコマンドを叩くことをオススメします。
+GitHub社員が来日!! Github教育エバンジェリストによるGithubハンズオン
+https://schoo.jp/class/2449
+あとは自分でGithubに登録してリポジトリを作って、 作業してみるのもいいと思います。
+Git初心者がGitを業務で利用する時の注意 Gitを理解していない人がGitを利用するのは、かなり危険だと思います。
+複数人で同時作業を行うことがよくあるのですが、
+理解していない人が一人でもいるとコンフリクト(衝突)を起こしてしまい、
+なぜ、Errorが出ているのかもよくわかっておらず、無視してそのまま無理矢理pushしようとします。
+めっちゃ怖いですよね。。。
+なので、かなり大規模な内容は、ブランチを個々で切って、
+担当を分担して作業するのが得策かと思います。
+その作業内容をmasterブランチでマージする際は、
+「プルリクエスト」という機能を使うことで、
+作業内容に問題がないかなど、チェックを挟めます。
+マージする際は、理解している人にやってもらいたいですね。
+よく使うGitコマンド Gitを利用する際、ソースツリーなどソフトウェアを使っている方が多いのですが、
+私は、ターミナル派なので、コマンドを使います。
+実際、業務でよく使うコマンドについてもご紹介したいと思います。
+ほとんど差分しかpushしないので、 差分をAddする時は、
+$ git status ## 現在の状況 $ git add -u ## 差分のみadd $ git commit -m&amp;quot;サイト名 - ページ名 変更・修正・追加した箇所&amp;quot; $ git fetch ## リモートの最新情報を見に行く $ git pull origin master ## 最新情報に変更などがあれば、pull $ git push origin master ## そして、push  毎回打つのもめんどくさいので、</description>
+    </item>
+    
+    <item>
+      <title>【後編】Hugo &#43; Github Pagesで作ってみた</title>
+      <link>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <description>Github Pagesにブログを開設してみた。 ブログの基本設定をカスタムしてみる。 私がいじった設定は、主にconfig.tomlのSNSシェアボタンの表示・非表示設定や、 アイコンなどの設定、サイトのタイトル名などを変更してあります。
+あまりボタンが多すぎても邪魔くさいと感じてしまう人間なので、かなり削ってる方だと思います。
+サイトをローカルで見てみる カスタムしていると、「どこが、どんな風に変わったのか」がわからないので、 ローカルサーバーを立てて確認したいと思います。 ターミナルを開いて、下記コマンドをblogディレクトリ内で叩いてみましょう。
+$ hugo server Building sites … | EN +------------------+----+ Pages | 31 Paginator pages | 1 Non-page files | 0 Static files | 35 Processed images | 0 Aliases | 7 Sitemaps | 1 Cleaned | 0  コマンドを実行すると、「Building sites …」といった感じで、 ローカルサーバーが立ちます。 localhost:1313/で見れるかと思います。 問題なければ、本番反映しましょう。
+$ ./deploy.sh # このコマンドだけ叩けば、本番反映されます。  Google Analyticsを設定する Downloadしたテーマにもよりますが、 config.tomlの最初の方に
+googleAnalytics = &amp;quot;&amp;quot;  という項目ありますので、
+googleAnalytics = &amp;quot;UA-000000-1&amp;quot;  と、ご自身のUAから始まるものをいれてビルドしてあげるだけです。</description>
+    </item>
+    
+    <item>
+      <title>【前編】Hugo &#43; Github Pagesで作ってみた</title>
+      <link>https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
+最初、Jekyllでやろうとしましたが、Windowsとの相性が悪いって書かれてたので、
+Hugoでやることに。
+出来上がってから、Jekyllをchocolateyでできるっぽいことを知ったのですが、 もう作ってしまったものはしょうがないので、
+「Jekyllでやりたい！」という人は試してみてはどうでしょう。
+テーマ一覧を見ると、Jekyllの方が充実してると思う。
+Hugoテーマリスト：
+https://themes.gohugo.io/
+jekyllテーマリスト ：
+http://jekyllthemes.org/
+Hugoはデザイン的に、なんだかイケてないというか・・・。ｗ
+Hugoとは？ ・golangで作られた静的ジェネレーター
+・他のツールのように、デプロイコマンドがない
+・HTML/CSSを出力する動作が早い
+かなりざっくりですが。
+メリット ・ワードプレスのようなログインがない
+・テーマの自由度
+・記事作成後にコマンド一回叩けば本番反映される
+・Github Pagesを使ってるので無料
+・デフォルトのドメインであれば、SSL化されてる
+などなどｗ
+環境 ・Windows7 64bit
+・git
+・chocolatey
+・ターミナルはbash
+まず、環境構築 では、早速インストールした手順をざっくり紹介していきます。
+Hugoを使うきっかけはこれ。
+https://onoxeve.com/posts/hugo-on-github-pages/
+上記の記事内では、Homebrewを紹介しているが、WindowsではHomebrewを使えないため、
+この記事では、Windowsを使っている人向けになります。
+Homebrewの代わりとなるchocolateyをコマンドプロンプトから入れた。
+ ## 下記のコマンドをコピペで入力。 @&amp;quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;quot;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&amp;quot; &amp;amp;&amp;amp; SET &amp;quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;quot;  参考URL：https://chocolatey.org/install#installing-chocolatey インストール後、VS codeの再起動を行い、ターミナルでchocolateyコマンドを叩けば、VS codeでも使えることがわかる。
+Hugoを入れる chocolateyコマンドが使えるのを確認後、
+# 上記の工程が完了したら、ターミナルで下記コマンドを叩いてください。 $ choco install hugo  hugoのインストールが完了したら ターミナルでgit管理するディレクトリを作成していきます。</description>
+    </item>
+    
+  </channel>
+</rss>
