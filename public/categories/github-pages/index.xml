@@ -6,10 +6,41 @@
     <description>Recent content in Github Pages on フロントエンド異世界物語</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 02 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://thekronos07.github.io/kinko-blog/categories/github-pages/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chromeだけvideoタグを使った動画が再生できない問題について</title>
+      <link>https://thekronos07.github.io/kinko-blog/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thekronos07.github.io/kinko-blog/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
+      <description>videoタグで動画を扱う際に注意すること なぜかChromeだけ初期表示で動画再生がされない事件 最近、なぜかサイト内の背景動画がChromeブラウザだけ、
+動かないという問題起きていました。
+しかし、意外にも簡単に解決できたので、ご紹介したいと思います。
+Chrome以外のブラウザでは、動画再生が可能。 まず、検証して気づきました。
+FirefoxやIE11でさえ、動くのにChromeでは動かないということに。
+最初はJSなどの影響を受けてるのではないかと思い、
+調査してみましたが、何の問題もなく。。。
+リンクをコピペで飛ぶと、
+初期表示では、再生されず。
+二回目以降で再生されるという不思議なものでした。
+ググってみると 下記のサイトが参考になりました。
+Chrome最新版にて背景動画が自動再生されない事象：原因と対処方法 http://souken-blog.com/2018/05/08/chrome-movie/
+今回は、ここに記載されている
+videoタグにmutedを追加するというだけでした。
+&amp;lt;video autoplay loop muted src=&amp;quot;movie.mp4&amp;quot;&amp;gt;&amp;lt;/video&amp;gt;  背景動画で使っている動画はそもそも無音なので、
+これで解決できました。
+最後に 数ヶ月前まで再生されていたのに、再生されなくなるのは怖いですね。
+Chrome最新版にて背景動画が自動再生されない事象：原因と対処方法 http://souken-blog.com/2018/05/08/chrome-movie/
+上記のリンク先で、
+&amp;ldquo;広告動画からの音声を制限するのが主たる目的だそうです。&amp;rdquo;
+を見て「なるほどー！」と納得しました。
+今回はこの辺で。
+ありがとうございました。</description>
+    </item>
     
     <item>
       <title>【後編】Hugo &#43; Github Pagesで作ってみた</title>
