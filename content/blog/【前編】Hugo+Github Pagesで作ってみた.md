@@ -10,7 +10,6 @@ featuredpath = "date"
 linktitle = ""
 title = "【前編】Hugo+Github Pagesで作ってみた"
 type = "post"
-eyecatch = "/img/2018/06/pic01.jpg"
 +++
 
 # Github Pagesにブログを開設してみた。
