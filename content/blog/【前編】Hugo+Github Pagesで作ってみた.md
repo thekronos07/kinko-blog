@@ -8,7 +8,7 @@ featured = "pic01.png"
 featuredalt = "Pic 1"
 featuredpath = "date"
 linktitle = ""
-title = "【前編】Hugo + Github Pagesで作ってみた"
+title = "【前編】Hugo+Github Pagesで作ってみた"
 type = "post"
 
 +++
