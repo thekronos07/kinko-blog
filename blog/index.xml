@@ -85,11 +85,11 @@ $ git status ## 現在の状況 $ git add -u ## 差分のみadd $ git commit -m&
     </item>
     
     <item>
-      <title>【後編】Hugo &#43; Github Pagesで作ってみた</title>
-      <link>http://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <title>【後編】Hugo&#43;Github Pagesで作ってみた</title>
+      <link>http://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <guid>http://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Github Pagesにブログを開設してみた。 ブログの基本設定をカスタムしてみる。 私がいじった設定は、主にconfig.tomlのSNSシェアボタンの表示・非表示設定や、 アイコンなどの設定、サイトのタイトル名などを変更してあります。
 あまりボタンが多すぎても邪魔くさいと感じてしまう人間なので、かなり削ってる方だと思います。
 サイトをローカルで見てみる カスタムしていると、「どこが、どんな風に変わったのか」がわからないので、 ローカルサーバーを立てて確認したいと思います。 ターミナルを開いて、下記コマンドをblogディレクトリ内で叩いてみましょう。
@@ -100,11 +100,11 @@ googleAnalytics = &amp;quot;UA-000000-1&amp;quot;  と、ご自身のUAから始
     </item>
     
     <item>
-      <title>【前編】Hugo &#43; Github Pagesで作ってみた</title>
-      <link>http://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <title>【前編】Hugo&#43;Github Pagesで作ってみた</title>
+      <link>http://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <guid>http://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
 最初、Jekyllでやろうとしましたが、Windowsとの相性が悪いって書かれてたので、
 Hugoでやることに。
