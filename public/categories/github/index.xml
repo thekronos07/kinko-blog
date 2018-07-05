@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on FE異世界物語</title>
-    <link>https://thekronos07.github.io/kinko-blog/categories/github/</link>
+    <link>http://kinko25.tech/categories/github/</link>
     <description>Recent content in Github on FE異世界物語</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://thekronos07.github.io/kinko-blog/categories/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kinko25.tech/categories/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Chromeだけvideoタグを使った動画が再生できない問題について</title>
-      <link>https://thekronos07.github.io/kinko-blog/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
+      <link>http://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://thekronos07.github.io/kinko-blog/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
+      <guid>http://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
       <description>videoタグで動画を扱う際に注意すること なぜかChromeだけ初期表示で動画再生がされない事件 最近、なぜかサイト内の背景動画がChromeブラウザだけ、
 動かないという問題起きていました。
 しかし、意外にも簡単に解決できたので、ご紹介したいと思います。
@@ -47,10 +47,10 @@ videoタグにmutedを追加するというだけでした。
     
     <item>
       <title>GitとGithubの違いについて</title>
-      <link>https://thekronos07.github.io/kinko-blog/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</link>
+      <link>http://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</link>
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://thekronos07.github.io/kinko-blog/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</guid>
+      <guid>http://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</guid>
       <description>GitとGithubの違いとは？ GitとGithubの違いは、なんだと思いますか？ パッと答えられる人は、普段でgitを使っているのではないだろうか。
 知らないという方は、これを機に知っておいたほうが良さそうですね。
 GitとGithubの違いとは？ Gitは、結論から言うと、ツール。
@@ -86,10 +86,10 @@ $ git status ## 現在の状況 $ git add -u ## 差分のみadd $ git commit -m&
     
     <item>
       <title>【後編】Hugo &#43; Github Pagesで作ってみた</title>
-      <link>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <link>http://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://thekronos07.github.io/kinko-blog/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <guid>http://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Github Pagesにブログを開設してみた。 ブログの基本設定をカスタムしてみる。 私がいじった設定は、主にconfig.tomlのSNSシェアボタンの表示・非表示設定や、 アイコンなどの設定、サイトのタイトル名などを変更してあります。
 あまりボタンが多すぎても邪魔くさいと感じてしまう人間なので、かなり削ってる方だと思います。
 サイトをローカルで見てみる カスタムしていると、「どこが、どんな風に変わったのか」がわからないので、 ローカルサーバーを立てて確認したいと思います。 ターミナルを開いて、下記コマンドをblogディレクトリ内で叩いてみましょう。
@@ -101,10 +101,10 @@ googleAnalytics = &amp;quot;UA-000000-1&amp;quot;  と、ご自身のUAから始
     
     <item>
       <title>【前編】Hugo &#43; Github Pagesで作ってみた</title>
-      <link>https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <link>http://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://thekronos07.github.io/kinko-blog/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <guid>http://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo-&#43;-github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
 最初、Jekyllでやろうとしましたが、Windowsとの相性が悪いって書かれてたので、
 Hugoでやることに。
