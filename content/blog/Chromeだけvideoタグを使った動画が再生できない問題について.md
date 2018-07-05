@@ -10,7 +10,7 @@ featuredpath = "date"
 linktitle = ""
 title = "Chromeだけvideoタグを使った動画が再生できない問題について"
 type = "post"
-
+eyecatch = "/img/2018/07/pic02.jpg"
 +++
 
 # videoタグで動画を扱う際に注意すること

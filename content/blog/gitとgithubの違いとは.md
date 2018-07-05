@@ -10,7 +10,7 @@ featuredpath = "date"
 linktitle = ""
 title = "GitとGithubの違いについて"
 type = "post"
-
+eyecatch = "/img/2018/07/pic03.jpg"
 +++
 
 # GitとGithubの違いとは？
