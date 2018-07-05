@@ -41,12 +41,10 @@ FirefoxやIE11でさえ、動くのにChromeでは動かないということに
 
 「Chrome 66」以降のバージョンは、「音声付き動画の自動再生無効化」というもので制限されているみたい。
 
-
+```
 「Chrome 66」安定版がリリース--音声付き動画の自動再生を制限
-
 https://japan.cnet.com/article/35118004/
 
-```
 「Google Chrome 66」安定版　動画の自動再生がなくなり、62件の脆弱性に対処
 http://www.itmedia.co.jp/news/articles/1804/18/news087.html
 
