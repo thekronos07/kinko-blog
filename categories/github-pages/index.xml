@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github Pages on FE異世界物語</title>
-    <link>http://kinko25.tech/categories/github-pages/</link>
+    <link>https://kinko25.tech/categories/github-pages/</link>
     <description>Recent content in Github Pages on FE異世界物語</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://kinko25.tech/categories/github-pages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kinko25.tech/categories/github-pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Chromeだけvideoタグを使った動画が再生できない問題について</title>
-      <link>http://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
+      <link>https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
+      <guid>https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
       <description>videoタグで動画を扱う際に注意すること なぜかChromeだけ初期表示で動画再生がされない事件 最近、なぜかサイト内の背景動画がChromeブラウザだけ、
 動かないという問題起きていました。
 しかし、意外にも簡単に解決できたので、ご紹介したいと思います。
@@ -28,9 +28,7 @@ FirefoxやIE11でさえ、動くのにChromeでは動かないということに
 初期表示で、背景動画は再生されず。
 二回目以降で再生されるという不思議なものでした。
 これは「Chrome 66」以降のバージョンで起きる問題 「Chrome 66」以降のバージョンは、「音声付き動画の自動再生無効化」というもので制限されているみたい。
-「Chrome 66」安定版がリリース&amp;ndash;音声付き動画の自動再生を制限
-https://japan.cnet.com/article/35118004/
-「Google Chrome 66」安定版　動画の自動再生がなくなり、62件の脆弱性に対処 http://www.itmedia.co.jp/news/articles/1804/18/news087.html &amp;quot;今回リリースされたChrome 66では、音声が再生されない動画か、ユーザーが以前にクリックした場合、あるいはその動画に関心を示したと認められる場合にのみ、自動再生が許可される。&amp;quot;  これを読むと、遷移した際に初期表示では再生されないが、 リロードすると2回目以降で再生される理由がわかった気がします。
+「Chrome 66」安定版がリリース--音声付き動画の自動再生を制限 https://japan.cnet.com/article/35118004/ 「Google Chrome 66」安定版　動画の自動再生がなくなり、62件の脆弱性に対処 http://www.itmedia.co.jp/news/articles/1804/18/news087.html &amp;quot;今回リリースされたChrome 66では、音声が再生されない動画か、ユーザーが以前にクリックした場合、あるいはその動画に関心を示したと認められる場合にのみ、自動再生が許可される。&amp;quot;  これを読むと、遷移した際に初期表示では再生されないが、 リロードすると2回目以降で再生される理由がわかった気がします。
 つまり、これがリリースされたのは2018年4月なので、 対応していないという方は早めに対応されたほうが良いかと思います。
 どうやって解決するか では、この問題をどう解決するか。
 videoタグにmutedを追加するというだけでした。
@@ -45,10 +43,10 @@ videoタグにmutedを追加するというだけでした。
     
     <item>
       <title>GitとGithubの違いについて</title>
-      <link>http://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</link>
+      <link>https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</link>
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</guid>
+      <guid>https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/</guid>
       <description>GitとGithubの違いとは？ GitとGithubの違いは、なんだと思いますか？ パッと答えられる人は、普段でgitを使っているのではないだろうか。
 知らないという方は、これを機に知っておいたほうが良さそうですね。
 GitとGithubの違いとは？ Gitは、結論から言うと、ツール。
@@ -84,10 +82,10 @@ $ git status ## 現在の状況 $ git add -u ## 差分のみadd $ git commit -m&
     
     <item>
       <title>【後編】Hugo&#43;Github Pagesで作ってみた</title>
-      <link>http://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <link>https://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <guid>https://kinko25.tech/blog/%E5%BE%8C%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Github Pagesにブログを開設してみた。 ブログの基本設定をカスタムしてみる。 私がいじった設定は、主にconfig.tomlのSNSシェアボタンの表示・非表示設定や、 アイコンなどの設定、サイトのタイトル名などを変更してあります。
 あまりボタンが多すぎても邪魔くさいと感じてしまう人間なので、かなり削ってる方だと思います。
 サイトをローカルで見てみる カスタムしていると、「どこが、どんな風に変わったのか」がわからないので、 ローカルサーバーを立てて確認したいと思います。 ターミナルを開いて、下記コマンドをblogディレクトリ内で叩いてみましょう。
@@ -99,10 +97,10 @@ googleAnalytics = &amp;quot;UA-000000-1&amp;quot;  と、ご自身のUAから始
     
     <item>
       <title>【前編】Hugo&#43;Github Pagesで作ってみた</title>
-      <link>http://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+      <link>https://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</link>
       <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+      <guid>https://kinko25.tech/blog/%E5%89%8D%E7%B7%A8hugo&#43;github-pages%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
       <description>Github Pagesにブログを開設してみた。 無料サーバーでブログを運営したい。 「金払ってワードプレスで作るのも、勿体無い。。。」 「はてなブログなどは楽だけど、自由度が。。。。」と思い、Github Pagesを使って、 ブログを開設してみました。
 最初、Jekyllでやろうとしましたが、Windowsとの相性が悪いって書かれてたので、
 Hugoでやることに。
