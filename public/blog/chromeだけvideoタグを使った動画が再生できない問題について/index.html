@@ -63,31 +63,36 @@
             <meta name="description" content="videoタグで動画を扱う際に注意すること">
         
 
-        <meta property="og:site_name" content="FE異世界物語" />
-<meta property="og:locale " content="ja-jp" />
-
-<meta property="og:url" content="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" />
-<meta name="twitter:url" content="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" />
-<link rel="canonical" href="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" />
-
-<meta name="description" content="videoタグで動画を扱う際に注意すること" />
-<meta name="twitter:description" content="videoタグで動画を扱う際に注意すること ">
-<meta property="og:description" content="videoタグで動画を扱う際に注意すること" />
-
-<meta name="twitter:site" content="@" />
-<meta name="twitter:creator" content="@" /> 
-
-  <meta property="og:title" content="videoタグを使った動画がChromeだけ再生できない問題について" />
-  <meta name="twitter:title" content="videoタグを使った動画がChromeだけ再生できない問題について" />
-
-  <meta name="twitter:image" content="https://kinko25.tech/img/main/icon.png" />
-  <meta property="og:image" content="https://kinko25.tech/img/main/icon.png" />
- 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:type" content="article" />
-  <meta property="og:article:published_time" content=" 2018-07-04T00:00:00Z " />
-  <meta property="og:article:section" content="blog" />
- 
+        
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="og:title" content="videoタグを使った動画がChromeだけ再生できない問題について" />
+        <meta name="og:description" content="videoタグで動画を扱う際に注意すること なぜかChromeだけ初期表示で動画再生がされない事件 最近、なぜかサイト内の背景動画がChromeブラウザだけ、
+動かないという問題起きていました。
+しかし、意外にも簡単に解決できたので、ご紹介したいと思います。
+Chrome以外のブラウザでは、動画再生が可能。 まず、検証して気づきました。
+FirefoxやIE11でさえ、動くのにChromeでは動かないということに。
+最初はJSなどの影響を受けてるのではないかと思い、
+調査してみましたが、何の問題もなく。。。
+リンクをコピペで飛ぶと、
+初期表示で、背景動画は再生されず。
+二回目以降で再生されるという不思議なものでした。
+これは「Chrome 66」以降のバージョンで起きる問題 「Chrome 66」以降のバージョンは、「音声付き動画の自動再生無効化」というもので制限されているみたい。
+「Chrome 66」安定版がリリース--音声付き動画の自動再生を制限 https://japan.cnet.com/article/35118004/ 「Google Chrome 66」安定版　動画の自動再生がなくなり、62件の脆弱性に対処 http://www.itmedia.co.jp/news/articles/1804/18/news087.html &quot;今回リリースされたChrome 66では、音声が再生されない動画か、ユーザーが以前にクリックした場合、あるいはその動画に関心を示したと認められる場合にのみ、自動再生が許可される。&quot;  これを読むと、遷移した際に初期表示では再生されないが、 リロードすると2回目以降で再生される理由がわかった気がします。
+つまり、これがリリースされたのは2018年4月なので、 対応していないという方は早めに対応されたほうが良いかと思います。
+どうやって解決するか では、この問題をどう解決するか。
+videoタグにmutedを追加するというだけでした。
+&lt;video autoplay loop muted src=&quot;movie.mp4&quot;&gt;&lt;/video&gt;  背景動画で使っている動画はそもそも無音なので、
+これで解決できました。
+最後に 今回は、videoタグにmutedを追加するだけで解決できましたが、今後のアップデートでどうなるかわかりませんので
+注意が必要ですね。
+背景動画がChromeで再生できない現象については、この辺で。
+ありがとうございました。
+参考URL：創kenブログ Chrome最新版にて背景動画が自動再生されない事象：原因と対処方法 http://souken-blog.com/2018/05/08/chrome-movie/" />
+        <meta name="og:image" content="https://kinko25.tech/" />
+        <meta name="twitter:url" content="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" />
+        <meta name="twitter:site" content="@thekronos07" />
+        <meta name="twitter:creator" content="@thekronos07" /> 
 
         
 <meta itemprop="name" content="videoタグを使った動画がChromeだけ再生できない問題について">
@@ -613,6 +618,9 @@ if (!doNotTrack) {
 
 
   
+  
+    
+  
 
 
         
@@ -620,7 +628,7 @@ if (!doNotTrack) {
         
 
         <a href="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="image featured">
-            <img src="https://kinko25.tech/date2018/07/pic02.jpg" alt="">
+            <img src="https://kinko25.tech/img/2018/072018/07/pic02.jpg" alt="">
         </a>
     
 
