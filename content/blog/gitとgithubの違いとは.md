@@ -1,7 +1,7 @@
 +++
 author = "kinko25"
-categories = ["Hugo","Github","Github Pages"]
-tags = ["hugo"]
+categories = ["Git","Github","Gitコマンド"]
+tags = ["Git","Github","Gitコマンド"]
 date = "2018-07-04"
 description = "GitとGithubの違いとは？"
 featured = "pic03.jpg"

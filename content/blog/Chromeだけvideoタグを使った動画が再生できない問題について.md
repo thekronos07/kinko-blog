@@ -1,7 +1,7 @@
 +++
 author = "kinko25"
-categories = ["Hugo","Github","Github Pages"]
-tags = ["hugo"]
+categories = ["HTML5","HTML5 VIDEOタグ","Chrome"]
+tags = ["HTML5","HTML5 VIDEOタグ","Chrome"]
 date = "2018-07-04"
 description = "videoタグで動画を扱う際に注意すること"
 featured = "pic02.jpg"

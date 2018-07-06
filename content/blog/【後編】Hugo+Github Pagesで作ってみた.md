@@ -1,7 +1,7 @@
 +++
 author = "kinko25"
 categories = ["Hugo","Github","Github Pages"]
-tags = ["hugo"]
+tags = ["Hugo","Github","Github Pages"]
 date = "2018-07-02"
 description = "Github Pagesにブログを開設してみた。"
 featured = "pic01.png"
