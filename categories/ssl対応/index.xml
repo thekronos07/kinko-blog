@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSL対応 on FE異世界物語</title>
+    <link>https://kinko25.tech/categories/ssl%E5%AF%BE%E5%BF%9C/</link>
+    <description>Recent content in SSL対応 on FE異世界物語</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 06 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kinko25.tech/categories/ssl%E5%AF%BE%E5%BF%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>お名前.comとCloudflareでSSL対応</title>
+      <link>https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/</guid>
+      <description>Hugo+Github Pagesで作ったブログを、お名前.comとCloudflareでSSL対応してみました なぜSSL対応したのか 下の記事を読めばお分かりいただけるでしょう。
+【緊急】2018年7月からSSL化していないサイト「http://」は「保護されていません」と警告が表示されるようになります！-エムタメ！
+https://mtame.jp/column/ssl_chrome68
+もうその7月がやってきてしまったからですね。
+まだSSL対応していないサイトも多いので、
+対応していないとこはGoogleでの検索順位も下がりそうですね。
+今回SSL化対応する際に、色々詰まるとこがあったので、皆さんの参考になればと思い、
+こちらで対応方法を書かせていただきます。
+SSL化するために必要なこと ①お名前.comでの、アカウント登録とドメイン取得。
+※お名前.comじゃなくてもいいです。ただ、今回ご紹介するのは、お名前.comでのやり方です。
+②Cloudflareでのアカウント登録
+③Hugo+Github Pagesで作成したサイト
+ざっくり必要だったようなことを上げていきます。
+ドメインを取得 「お名前.com」でドメイン取得しましょう。
+https://www.onamae.com/
+ドメイン取得が出来たら、 「お名前.com Navi」にログインして ↓ 上のタブから「DNS」タブをクリックします。 ↓ 遷移したら、「ドメインのDNS関連機能設定」を選択し、「次へ」。 ↓ 先程、取得したドメインにチェックを入れて、「次へ進む」
+ここまで来たらここは開きっぱなしにしておきましょう。
+github.ioのIPアドレスをdigる IPアドレスの調べ方について、調べてみると、
+どこの記事でもdigコマンドを使っていますが、
+私のPCでは、digコマンドが使えなかったので、
+digコマンドを使わなくてもIPアドレスを調べられる方法を書きます。
+※digコマンドを使うためにツールをインストールしたりもしましたが、ダメでした・・・。
+とは言っても、下のリンク先で、ホスト名に「アカウント名.github.io」のドメインを入力して
+「digを実行する」というボタンを押すだけの作業ですｗ
+https://www.cman.jp/network/support/nslookup.html
+実行すると、情報が吐き出されるので、
+「;; ANSWER SECTION:」の中にある
+123.xxx.xxx.xxx 456.xxx.xxx.xxx のドットで区切られた数字がIPアドレスです。 このIPアドレスが上から1番目と2番目が必要になります。
+このアドレスを次のDNS設定で使用します。
+DNS登録を行う digってIPアドレスをゲットしたら
+先程、「ドメインを取得」で紹介した開きっぱなしのタブに戻りましょう。 ↓ 「DNSレコード設定を利用する」の「設定する」をクリック。 ↓ 上の画像のとこまで移動して
+「VALUE」のとこにdigで取得したgithub.ioのIPアドレスを入力して「追加」しましょう。
+上の流れが終わったら、
+「ホスト名」に「www」と入力。
+「TYPE」に「CNAME」を選択。
+「VALUE」に「アカウント名.github.io」を入力して追加。
+CNAMEファイルを作成 git管理しているルートディレクトリに「CNAME」を作成。
+エディターでCNAMEを開き、お名前.comで取得したドメインを入力して保存。
+デプロイしてリモートにも上げておきましょう。
+ドメインをCloudflareに登録 CloudFlareの公式サイトです。
+https://www.cloudflare.com/ja-jp/
+ここでアカウントを作成してください。</description>
+    </item>
+    
+  </channel>
+</rss>
