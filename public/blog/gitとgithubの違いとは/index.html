@@ -62,43 +62,32 @@
         
             <meta name="description" content="GitとGithubの違いとは？">
         
-        <meta name="twitter:card" content="summary" />
-        <meta name="og:title" content="GitとGithubの違いについて" />
-        <meta name="og:description" content="GitとGithubの違いとは？ GitとGithubの違いは、なんだと思いますか？ パッと答えられる人は、普段でgitを使っているのではないだろうか。
-知らないという方は、これを機に知っておいたほうが良さそうですね。
-GitとGithubの違いとは？ Gitは、結論から言うと、ツール。
-Githubは、結論から言うと、サービス。
-ちなみに、私が利用しているこのサーバーはgithubのサービスです。
-Gitとは &quot;「Git」は、「ソースコードのバージョンを管理するツール」の名前。 システム開発では複数の開発者によってソースコードが書き換わります。 いつ誰がどこを変えたのか？ 最新のバージョンはどれか？ など、 ソースコードのバージョンを把握する必要があります。 このバージョン管理をするツールの1つが「Git」です。&quot;  参考URL：いまさら聞けないGitとGitHubの違いって何？ https://www.i3design.jp/in-pocket/3111
-Githubとは &quot;「GitHub」は、「Gitを利用した、開発者を支援するWebサービス」の名前です。 GitHubは、クラウド上でGitを用いたバージョン管理をすることができ、さらにGitには無い、 開発者に便利な機能を追加しています。いまやユーザ数は1000万人を超え、 世界中のソフトウェア開発に利用されているサービスです。&quot;  参考URL：いまさら聞けないGitとGitHubの違いって何？ https://www.i3design.jp/in-pocket/3111
-Gitの使い方を理解しよう ググると、だいたい「サルでもわかるGit」みたいなのが出てきますが、
-ぶっちゃけわかりません！！ｗ
-個人的に、一番わかりやすいのはGithub社員の方が来日した際に、イベントの内容。
-これに自分も参加していたのですが、本当にわかりやすかったですねー。
-かなり長めの動画なので、時間がある時にみながらコマンドを叩くことをオススメします。
-GitHub社員が来日!! Github教育エバンジェリストによるGithubハンズオン
-https://schoo.jp/class/2449
-あとは自分でGithubに登録してリポジトリを作って、 作業してみるのもいいと思います。
-Git初心者がGitを業務で利用する時の注意 Gitを理解していない人がGitを利用するのは、かなり危険だと思います。
-複数人で同時作業を行うことがよくあるのですが、
-理解していない人が一人でもいるとコンフリクト(衝突)を起こしてしまい、
-なぜ、Errorが出ているのかもよくわかっておらず、無視してそのまま無理矢理pushしようとします。
-めっちゃ怖いですよね。。。
-なので、かなり大規模な内容は、ブランチを個々で切って、
-担当を分担して作業するのが得策かと思います。
-その作業内容をmasterブランチでマージする際は、
-「プルリクエスト」という機能を使うことで、
-作業内容に問題がないかなど、チェックを挟めます。
-マージする際は、理解している人にやってもらいたいですね。
-よく使うGitコマンド Gitを利用する際、ソースツリーなどソフトウェアを使っている方が多いのですが、
-私は、ターミナル派なので、コマンドを使います。
-実際、業務でよく使うコマンドについてもご紹介したいと思います。
-ほとんど差分しかpushしないので、 差分をAddする時は、
-$ git status ## 現在の状況 $ git add -u ## 差分のみadd $ git commit -m&quot;サイト名 - ページ名 変更・修正・追加した箇所&quot; $ git fetch ## リモートの最新情報を見に行く $ git pull origin master ## 最新情報に変更などがあれば、pull $ git push origin master ## そして、push  毎回打つのもめんどくさいので、" />
-        <meta name="og:image" content="https://kinko25.tech//img/main/icon.png" />
-        <meta name="twitter:url" content="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" />
-        <meta name="twitter:site" content="@thekronos07" />
-        <meta name="twitter:creator" content="@thekronos07" />
+
+        <meta property="og:site_name" content="FE異世界物語" />
+<meta property="og:locale " content="ja-jp" />
+
+<meta property="og:url" content="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" />
+<meta name="twitter:url" content="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" />
+<link rel="canonical" href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" />
+
+<meta name="description" content="GitとGithubの違いとは？" />
+<meta name="twitter:description" content="GitとGithubの違いとは？ ">
+<meta property="og:description" content="GitとGithubの違いとは？" />
+
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" /> 
+
+  <meta property="og:title" content="GitとGithubの違いについて" />
+  <meta name="twitter:title" content="GitとGithubの違いについて" />
+
+  <meta name="twitter:image" content="https://kinko25.tech/img/main/icon.png" />
+  <meta property="og:image" content="https://kinko25.tech/img/main/icon.png" />
+ 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:type" content="article" />
+  <meta property="og:article:published_time" content=" 2018-07-04T00:00:00Z " />
+  <meta property="og:article:section" content="blog" />
+ 
 
         
 <meta itemprop="name" content="GitとGithubの違いについて">
@@ -279,6 +268,9 @@ if (!doNotTrack) {
 
 
   
+  
+    
+  
 
 
         
@@ -325,7 +317,7 @@ if (!doNotTrack) {
         
 
         <a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/" class="image featured">
-            <img src="https://kinko25.tech/img//pic04.png" alt="">
+            <img src="https://kinko25.tech/img/2018/07/pic04.png" alt="">
         </a>
     
 
@@ -364,7 +356,7 @@ if (!doNotTrack) {
         
 
         <a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" class="image featured">
-            <img src="https://kinko25.tech/img/2018/072018/07/pic03.jpg" alt="">
+            <img src="https://kinko25.tech/img/2018/07/pic03.jpg" alt="">
         </a>
     
 
@@ -403,7 +395,7 @@ if (!doNotTrack) {
         
 
         <a href="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="image featured">
-            <img src="https://kinko25.tech/img/2018/072018/07/pic02.jpg" alt="">
+            <img src="https://kinko25.tech/img/2018/07/pic02.jpg" alt="">
         </a>
     
 
