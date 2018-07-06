@@ -70,13 +70,13 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/css/</loc>
+    <loc>https://kinko25.tech/categories/css/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kinko25.tech/categories/css/</loc>
+    <loc>https://kinko25.tech/tags/css/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -88,25 +88,25 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/chrome/</loc>
-    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kinko25.tech/categories/chrome/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/cloudflare/</loc>
-    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
+    <loc>https://kinko25.tech/tags/chrome/</loc>
+    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kinko25.tech/categories/cloudflare/</loc>
+    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kinko25.tech/tags/cloudflare/</loc>
     <lastmod>2018-07-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -118,20 +118,14 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/git/</loc>
-    <lastmod>2018-07-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kinko25.tech/categories/git/</loc>
     <lastmod>2018-07-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/github/</loc>
-    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
+    <loc>https://kinko25.tech/tags/git/</loc>
+    <lastmod>2018-07-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -142,7 +136,7 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/github-pages/</loc>
+    <loc>https://kinko25.tech/tags/github/</loc>
     <lastmod>2018-07-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -154,8 +148,8 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</loc>
-    <lastmod>2018-07-04T00:00:00+00:00</lastmod>
+    <loc>https://kinko25.tech/tags/github-pages/</loc>
+    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -166,7 +160,7 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/html5/</loc>
+    <loc>https://kinko25.tech/tags/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</loc>
     <lastmod>2018-07-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -178,7 +172,7 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/html5-video%E3%82%BF%E3%82%B0/</loc>
+    <loc>https://kinko25.tech/tags/html5/</loc>
     <lastmod>2018-07-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -190,13 +184,19 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/hugo/</loc>
-    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
+    <loc>https://kinko25.tech/tags/html5-video%E3%82%BF%E3%82%B0/</loc>
+    <lastmod>2018-07-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kinko25.tech/categories/hugo/</loc>
+    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kinko25.tech/tags/hugo/</loc>
     <lastmod>2018-07-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -208,13 +208,13 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/ssl%E5%AF%BE%E5%BF%9C/</loc>
+    <loc>https://kinko25.tech/categories/ssl%E5%AF%BE%E5%BF%9C/</loc>
     <lastmod>2018-07-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kinko25.tech/categories/ssl%E5%AF%BE%E5%BF%9C/</loc>
+    <loc>https://kinko25.tech/tags/ssl%E5%AF%BE%E5%BF%9C/</loc>
     <lastmod>2018-07-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -226,25 +226,25 @@
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/%E3%81%8A%E5%90%8D%E5%89%8D.com/</loc>
-    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kinko25.tech/categories/%E3%81%8A%E5%90%8D%E5%89%8D.com/</loc>
     <lastmod>2018-07-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kinko25.tech/tags/%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB/</loc>
-    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
+    <loc>https://kinko25.tech/tags/%E3%81%8A%E5%90%8D%E5%89%8D.com/</loc>
+    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kinko25.tech/categories/%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB/</loc>
+    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kinko25.tech/tags/%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
