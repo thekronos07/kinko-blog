@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome on FE異世界物語</title>
+    <link>https://kinko25.tech/categories/chrome/</link>
+    <description>Recent content in Chrome on FE異世界物語</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kinko25.tech/categories/chrome/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chromeだけvideoタグを使った動画が再生できない問題について</title>
+      <link>https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
+      <description>videoタグで動画を扱う際に注意すること なぜかChromeだけ初期表示で動画再生がされない事件 最近、なぜかサイト内の背景動画がChromeブラウザだけ、
+動かないという問題起きていました。
+しかし、意外にも簡単に解決できたので、ご紹介したいと思います。
+Chrome以外のブラウザでは、動画再生が可能。 まず、検証して気づきました。
+FirefoxやIE11でさえ、動くのにChromeでは動かないということに。
+最初はJSなどの影響を受けてるのではないかと思い、
+調査してみましたが、何の問題もなく。。。
+リンクをコピペで飛ぶと、
+初期表示で、背景動画は再生されず。
+二回目以降で再生されるという不思議なものでした。
+これは「Chrome 66」以降のバージョンで起きる問題 「Chrome 66」以降のバージョンは、「音声付き動画の自動再生無効化」というもので制限されているみたい。
+「Chrome 66」安定版がリリース--音声付き動画の自動再生を制限 https://japan.cnet.com/article/35118004/ 「Google Chrome 66」安定版　動画の自動再生がなくなり、62件の脆弱性に対処 http://www.itmedia.co.jp/news/articles/1804/18/news087.html &amp;quot;今回リリースされたChrome 66では、音声が再生されない動画か、ユーザーが以前にクリックした場合、あるいはその動画に関心を示したと認められる場合にのみ、自動再生が許可される。&amp;quot;  これを読むと、遷移した際に初期表示では再生されないが、 リロードすると2回目以降で再生される理由がわかった気がします。
+つまり、これがリリースされたのは2018年4月なので、 対応していないという方は早めに対応されたほうが良いかと思います。
+どうやって解決するか では、この問題をどう解決するか。
+videoタグにmutedを追加するというだけでした。
+&amp;lt;video autoplay loop muted src=&amp;quot;movie.mp4&amp;quot;&amp;gt;&amp;lt;/video&amp;gt;  背景動画で使っている動画はそもそも無音なので、
+これで解決できました。
+最後に 今回は、videoタグにmutedを追加するだけで解決できましたが、今後のアップデートでどうなるかわかりませんので
+注意が必要ですね。
+背景動画がChromeで再生できない現象については、この辺で。
+ありがとうございました。
+参考URL：創kenブログ Chrome最新版にて背景動画が自動再生されない事象：原因と対処方法 http://souken-blog.com/2018/05/08/chrome-movie/</description>
+    </item>
+    
+    <item>
+      <title>使用していないCSSを簡単に探す方法</title>
+      <link>https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/</guid>
+      <description>Developer Toolを使って、使用されていないCSSを検索する方法 使用していないCSSの判別方法 皆さんは、どうやって使っていないCSSを判別しているのだろう？
+ググると判別してくれるサービスがあるのは、
+よく見かけますね。
+今回そのググる手間を省けるツールをご紹介したいと思います。
+デベロッパーツールで使ってないCSSを判別 まず、デベロッパーを開いてください。
+開いたら、一番右上の「︙」があるので、
+そこをクリックして「Search」をクリック。
+「Search」タブをクリックしたら クリックすると画像のように、下の方に「Search」のタブが出てきます。
+「Search」タブが表示されていることを確認したら 今度は、「Search」タブがあるとこの左側「︙」をクリック。
+メニューが表示されたら「Coverage」をクリック。
+「Coverage」をクリックしたら 左側にある「●」を押してください。
+押すと、ファイルごとに使われいる割合と使われていない部分の割合を色で出してくれます。
+gitの差分みたいに出てくるので、とてもわかりやすいですね。
+あとは、このままレスポンシブにしたり、
+js系のクリックイベントなども発動させましょう。
+最後に どうでしたでしょうか？ 意外と数クリックで調べられるのって便利ですよね？
+使う機会があれば、ぜひ使ってみてはいかがでしょうか。
+それでは、使用していないCSSの判別方法については、この辺で。
+ありがとうございました。</description>
+    </item>
+    
+  </channel>
+</rss>
