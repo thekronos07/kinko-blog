@@ -8,7 +8,7 @@ featured = "pic02.jpg"
 featuredalt = "Pic 2"
 featuredpath = "date"
 linktitle = ""
-title = "Chromeだけvideoタグを使った動画が再生できない問題について"
+title = "videoタグを使った動画がChromeだけ再生できない問題について"
 type = "post"
 +++
 
