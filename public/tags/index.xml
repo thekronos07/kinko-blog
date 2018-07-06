@@ -6,7 +6,7 @@
     <description>Recent content in Tags on FE異世界物語</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kinko25.tech/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>CSS</title>
       <link>https://kinko25.tech/tags/css/</link>
-      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kinko25.tech/tags/css/</guid>
       <description></description>
@@ -23,9 +23,18 @@
     <item>
       <title>Chrome</title>
       <link>https://kinko25.tech/tags/chrome/</link>
-      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kinko25.tech/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloudflare</title>
+      <link>https://kinko25.tech/tags/cloudflare/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/tags/cloudflare/</guid>
       <description></description>
     </item>
     
@@ -41,7 +50,7 @@
     <item>
       <title>Github</title>
       <link>https://kinko25.tech/tags/github/</link>
-      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kinko25.tech/tags/github/</guid>
       <description></description>
@@ -50,7 +59,7 @@
     <item>
       <title>Github Pages</title>
       <link>https://kinko25.tech/tags/github-pages/</link>
-      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kinko25.tech/tags/github-pages/</guid>
       <description></description>
@@ -86,16 +95,34 @@
     <item>
       <title>Hugo</title>
       <link>https://kinko25.tech/tags/hugo/</link>
-      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kinko25.tech/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>SSL対応</title>
+      <link>https://kinko25.tech/tags/ssl%E5%AF%BE%E5%BF%9C/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/tags/ssl%E5%AF%BE%E5%BF%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>お名前.com</title>
+      <link>https://kinko25.tech/tags/%E3%81%8A%E5%90%8D%E5%89%8D.com/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/tags/%E3%81%8A%E5%90%8D%E5%89%8D.com/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>デベロッパーツール</title>
       <link>https://kinko25.tech/tags/%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB/</link>
-      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kinko25.tech/tags/%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB/</guid>
       <description></description>

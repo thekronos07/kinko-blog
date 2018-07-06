@@ -2,7 +2,7 @@
 author = "kinko25"
 categories = ["CSS","Chrome","デベロッパーツール"]
 tags = ["CSS","Chrome","デベロッパーツール"]
-date = "2018-07-04"
+date = "2018-07-05"
 description = "Developer Toolを使って、使用されていないCSSを検索する方法"
 featured = "pic04.png"
 featuredalt = "Pic 4"
