@@ -1,0 +1,1489 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https://kinko25.tech/"
+        },
+        "articleSection" : "blog",
+        "name" : "画像圧縮をGulpとTinyPNG APIで自動化しよう！",
+        "headline" : "画像圧縮をGulpとTinyPNG APIで自動化しよう！",
+        "description" : "大量の画像を圧縮していくのって面倒。",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-08-01 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-08-01 00:00:00 &#43;0000 UTC",
+        "url" : "https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/",
+        "wordCount" : "108",
+        "keywords" : [ "Gulp","Node.js","画像圧縮","Blog" ]
+    }
+    </script>
+        
+            
+                <title>画像圧縮をGulpとTinyPNG APIで自動化しよう！</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.42.1" />
+        
+  
+    
+  
+
+  
+
+  <link rel="apple-touch-icon-precomposed" href='https://kinko25.tech/favicon/apple-touch-icon-precomposed.png'>
+  <link rel="icon" href='https://kinko25.tech/favicon/favicon.ico'>
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content='/favicon/mstile.png'>
+  <meta name="application-name" content="FE異世界物語">
+  <meta name="msapplication-tooltip" content="フロントエンド周りのことについて書いていきます。">
+  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
+
+
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati57.png" sizes="57x57">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati60.png" sizes="60x60">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati72.png" sizes="72x72">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati76.png" sizes="76x76">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati114.png" sizes="114x114">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati144.png" sizes="144x144">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati152.png" sizes="152x152">
+
+        
+            <meta name="author" content="kinko25">
+        
+        
+            <meta name="description" content="大量の画像を圧縮していくのって面倒。">
+        
+
+        <meta property="og:type" content="website">
+<meta property="og:title" content="FE異世界物語">
+<meta property="og:url" content="https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/">
+<meta property="og:site_name" content="FE異世界物語">
+<meta property="og:description" content="大量の画像を圧縮していくのって面倒。">
+<meta property="og:image" content="https://kinko25.tech/img/ogp/ogp.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site:id" content="@thekronos07">
+<meta name="twitter:creator" content="@thekronos07">
+
+        
+<meta itemprop="name" content="画像圧縮をGulpとTinyPNG APIで自動化しよう！">
+<meta itemprop="description" content="大量の画像を圧縮していくのって面倒。">
+
+
+<meta itemprop="datePublished" content="2018-08-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-08-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="108">
+
+
+
+<meta itemprop="keywords" content="Gulp,Node.js,画像圧縮," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://kinko25.tech/css/main.css">
+            <link rel="stylesheet" href="https://kinko25.tech/css/add-on.css">
+            <link rel="stylesheet" href="https://kinko25.tech/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-103935601-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <script> (adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-9543988496970572", enable_page_level_ads: true }); </script>
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      
+      <h1><a href="https://kinko25.tech/">FE異世界物語</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://kinko25.tech/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>ブログトップ
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://kinko25.tech/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>問合せ
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="https://kinko25.tech/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="https://kinko25.tech/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://kinko25.tech/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>ブログトップ
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://kinko25.tech/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>問合せ
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/">画像圧縮をGulpとTinyPNG APIで自動化しよう！</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-08-01'>
+                                    August 1, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/08/pic06.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/">お名前.comとCloudflareでSSL対応</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-07-06'>
+                                    July 6, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic05.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/">使用していないCSSを簡単に探す方法</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-07-05'>
+                                    July 5, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic04.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/">GitとGithubの違いについて</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-07-04'>
+                                    July 4, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic03.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">videoタグを使った動画がChromeだけ再生できない問題について</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-07-04'>
+                                    July 4, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic02.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fkinko25.tech%2fblog%2f%25E3%2582%2581%25E3%2582%2593%25E3%2581%25A9%25E3%2581%258F%25E3%2581%2595%25E3%2581%2584%25E7%2594%25BB%25E5%2583%258F%25E5%259C%25A7%25E7%25B8%25AE%25E3%2582%2592%25E4%25B8%2580%25E6%258B%25AC%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%2f&amp;text=%e7%94%bb%e5%83%8f%e5%9c%a7%e7%b8%ae%e3%82%92Gulp%e3%81%a8TinyPNG%20API%e3%81%a7%e8%87%aa%e5%8b%95%e5%8c%96%e3%81%97%e3%82%88%e3%81%86%ef%bc%81&amp;via=thekronos07" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkinko25.tech%2fblog%2f%25E3%2582%2581%25E3%2582%2593%25E3%2581%25A9%25E3%2581%258F%25E3%2581%2595%25E3%2581%2584%25E7%2594%25BB%25E5%2583%258F%25E5%259C%25A7%25E7%25B8%25AE%25E3%2582%2592%25E4%25B8%2580%25E6%258B%25AC%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by kinko25&amp;body=https%3a%2f%2fkinko25.tech%2fblog%2f%25E3%2582%2581%25E3%2582%2593%25E3%2581%25A9%25E3%2581%258F%25E3%2581%2595%25E3%2581%2584%25E7%2594%25BB%25E5%2583%258F%25E5%259C%25A7%25E7%25B8%25AE%25E3%2582%2592%25E4%25B8%2580%25E6%258B%25AC%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/">画像圧縮をGulpとTinyPNG APIで自動化しよう！</a></h1>
+            
+        
+        
+            <p>大量の画像を圧縮していくのって面倒。</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2018-08-01'>
+            August 1, 2018</time>
+        <span class="author">kinko25</span>
+        
+            <p>1 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fkinko25.tech%2fblog%2f%25E3%2582%2581%25E3%2582%2593%25E3%2581%25A9%25E3%2581%258F%25E3%2581%2595%25E3%2581%2584%25E7%2594%25BB%25E5%2583%258F%25E5%259C%25A7%25E7%25B8%25AE%25E3%2582%2592%25E4%25B8%2580%25E6%258B%25AC%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%2f&amp;text=%e7%94%bb%e5%83%8f%e5%9c%a7%e7%b8%ae%e3%82%92Gulp%e3%81%a8TinyPNG%20API%e3%81%a7%e8%87%aa%e5%8b%95%e5%8c%96%e3%81%97%e3%82%88%e3%81%86%ef%bc%81&amp;via=thekronos07" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkinko25.tech%2fblog%2f%25E3%2582%2581%25E3%2582%2593%25E3%2581%25A9%25E3%2581%258F%25E3%2581%2595%25E3%2581%2584%25E7%2594%25BB%25E5%2583%258F%25E5%259C%25A7%25E7%25B8%25AE%25E3%2582%2592%25E4%25B8%2580%25E6%258B%25AC%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by kinko25&amp;body=https%3a%2f%2fkinko25.tech%2fblog%2f%25E3%2582%2581%25E3%2582%2593%25E3%2581%25A9%25E3%2581%258F%25E3%2581%2595%25E3%2581%2584%25E7%2594%25BB%25E5%2583%258F%25E5%259C%25A7%25E7%25B8%25AE%25E3%2582%2592%25E4%25B8%2580%25E6%258B%25AC%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/08/pic06.png" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<h1 id="画像圧縮を自動化しよう">画像圧縮を自動化しよう！</h1>
+
+<h2 id="大量の画像を圧縮していくのって面倒">大量の画像を圧縮していくのって面倒。</h2>
+
+<p>前回の更新から大分、経ってしまいました。。。</p>
+
+<p>今回は、画像圧縮について</p>
+
+<p>画像を圧縮して、サイズ容量を減らすことでサイトの表示速度に大きく影響します。</p>
+
+<p>表示速度を軽視してる人が多いので、そういう人は3G回線で生活してみてはどうでしょう。</p>
+
+<p>ストレスでしかないと思いますｗ</p>
+
+<p>それでは、大量の画像圧縮を一回のコマンドを叩くだけで500枚まで圧縮する方法をご紹介したい。</p>
+
+<h2 id="どうやって圧縮するか">どうやって圧縮するか？</h2>
+
+<p>実際、どうやって圧縮するのかはいろんなやり方がありますが、</p>
+
+<p>今回は、gulpと画像圧縮で有名な「TinyPNG」のAPIを使って行きます。
+TinyPNGと言っても、名前すら覚えてない人がおおいので、
+パンダのやつって言えばわかると思います。</p>
+
+<h2 id="tinypng-apiを取得しよう">TinyPNG APIを取得しよう。</h2>
+
+<p>下記、リンク先でメールアドレスを入力して「Get your API key」を押しましょう。</p>
+
+<p><a href="https://tinypng.com/developers">https://tinypng.com/developers</a></p>
+
+<p>APIキーが取得出来たら、メモ帳などにコピペしておいてください。</p>
+
+<h2 id="圧縮するための準備をする">圧縮するための準備をする</h2>
+
+<pre><code>環境
+Windows7
+Node.js 最新版 ※Nodeは予め、インストールしておきましょう。
+gulp 3系
+</code></pre>
+
+<p>Macならターミナル、Windowsならgitbashなどを開いてください。</p>
+
+<p>あとは下記コマンドを叩きまくっていけばいけます。</p>
+
+<pre><code>$ pwd
+$ ls -la
+$ mkdir tpng
+$ cd tpng
+$ mkdir img
+$ mkdir tpng_img
+$ npm init
+$ npm install gulp
+$ npm install gulp-tinypng-compress
+$ touch gulpfile.js
+
+## ここでgulpfile.jsをエディターで開きましょう
+## 開いたら下記の内容をコピペ。
+###################################################
+var gulp = require('gulp')
+var tinyping = require('gulp-tinypng-compress')
+
+// TinyPNG APIを使用した画像圧縮
+gulp.task('tpng', function() {
+  gulp
+    .src('./img/**/*.{png,jpg,jpeg}')
+    .pipe(
+      tinyping({
+        key: 'APIキー' // TinyPNGのAPI Keyを入力
+      })
+    )
+    .pipe(gulp.dest('./tpng_img'))
+})
+###################################################
+
+$ gulp tpng
+</code></pre>
+
+<p>これで動けばあとはコンパイルを待つだけです。</p>
+
+<p>「動かない」、「壊れた」など言ってる人は出直してください。</p>
+
+<h2 id="最後に">最後に</h2>
+
+<p>ブラウザ上のTiny PNGに一枚一枚画像ぶん投げてるのを見ると、めっちゃ非効率でイケてないと思うので、</p>
+
+<p>gulpコマンド叩いて圧縮が終わるまで、のんびり他の事に時間を費やすことをオススメします。</p>
+
+<p>それでは、GulpとTiny PNG APIを使った画像自動圧縮については、この辺で。</p>
+
+<p>ありがとうございました。</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/categories/gulp">Gulp</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/categories/node.js">Node.js</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/categories/%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE">画像圧縮</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/tags/gulp">Gulp</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/tags/node.js">Node.js</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/tags/%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE">画像圧縮</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/"
+                class="button big previous">お名前.comとCloudflareでSSL対応</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://kinko25.tech/'><img src="https://kinko25.tech/img/main/icon.png" class="intro-circle" width="150" alt="icon" /></a>
+      
+    
+    
+      <header>
+        <h2>kinko25</h2>
+        <p>元フロントエンドエンジニア <br>現在は、HTMLコーダー</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="https://kinko25.tech/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/thekronos07" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/thekronos07" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:thekronos07@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/">画像圧縮をGulpとTinyPNG APIで自動化しよう！</a>
+              </h3>
+              
+              <time class="published" datetime='2018-08-01'>
+                August 1, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/08/pic06.png" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/">お名前.comとCloudflareでSSL対応</a>
+              </h3>
+              
+              <time class="published" datetime='2018-07-06'>
+                July 6, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic05.png" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/">使用していないCSSを簡単に探す方法</a>
+              </h3>
+              
+              <time class="published" datetime='2018-07-05'>
+                July 5, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic04.png" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/">GitとGithubの違いについて</a>
+              </h3>
+              
+              <time class="published" datetime='2018-07-04'>
+                July 4, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic03.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">videoタグを使った動画がChromeだけ再生できない問題について</a>
+              </h3>
+              
+              <time class="published" datetime='2018-07-04'>
+                July 4, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/chrome%E3%81%A0%E3%81%91video%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%8B%95%E7%94%BB%E3%81%8C%E5%86%8D%E7%94%9F%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic02.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://kinko25.tech/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                Uncategorized
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/github/">Github</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/github-pages/">Github Pages</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/hugo/">Hugo</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/chrome/">Chrome</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/css/">CSS</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/cloudflare/">Cloudflare</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/git/">Git</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/">Gitコマンド</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/gulp/">Gulp</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/html5/">HTML5</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/html5-video%E3%82%BF%E3%82%B0/">HTML5 VIDEOタグ</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/node.js/">Node.js</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/ssl%E5%AF%BE%E5%BF%9C/">SSL対応</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/%E3%81%8A%E5%90%8D%E5%89%8D.com/">お名前.com</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB/">デベロッパーツール</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE/">画像圧縮</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="https://kinko25.tech/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/thekronos07" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/thekronos07" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:thekronos07@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2018
+        
+          FE異世界物語
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://kinko25.tech/js/util.js"></script>
+      <script src="https://kinko25.tech/js/main.js"></script>
+      <script src="https://kinko25.tech/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

@@ -6,10 +6,32 @@
     <description>Recent content on FE異世界物語</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 06 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kinko25.tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>画像圧縮をGulpとTinyPNG APIで自動化しよう！</title>
+      <link>https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/</guid>
+      <description>画像圧縮を自動化しよう！ 大量の画像を圧縮していくのって面倒。 前回の更新から大分、経ってしまいました。。。
+今回は、画像圧縮について
+画像を圧縮して、サイズ容量を減らすことでサイトの表示速度に大きく影響します。
+表示速度を軽視してる人が多いので、そういう人は3G回線で生活してみてはどうでしょう。
+ストレスでしかないと思いますｗ
+それでは、大量の画像圧縮を一回のコマンドを叩くだけで500枚まで圧縮する方法をご紹介したい。
+どうやって圧縮するか？ 実際、どうやって圧縮するのかはいろんなやり方がありますが、
+今回は、gulpと画像圧縮で有名な「TinyPNG」のAPIを使って行きます。 TinyPNGと言っても、名前すら覚えてない人がおおいので、 パンダのやつって言えばわかると思います。
+TinyPNG APIを取得しよう。 下記、リンク先でメールアドレスを入力して「Get your API key」を押しましょう。
+https://tinypng.com/developers
+APIキーが取得出来たら、メモ帳などにコピペしておいてください。
+圧縮するための準備をする 環境 Windows7 Node.js 最新版 ※Nodeは予め、インストールしておきましょう。 gulp 3系  Macならターミナル、Windowsならgitbashなどを開いてください。
+あとは下記コマンドを叩きまくっていけばいけます。
+$ pwd $ ls -la $ mkdir tpng $ cd tpng $ mkdir img $ mkdir tpng_img $ npm init $ npm install gulp $ npm install gulp-tinypng-compress $ touch gulpfile.js ## ここでgulpfile.jsをエディターで開きましょう ## 開いたら下記の内容をコピペ。 ################################################### var gulp = require(&#39;gulp&#39;) var tinyping = require(&#39;gulp-tinypng-compress&#39;) // TinyPNG APIを使用した画像圧縮 gulp.</description>
+    </item>
     
     <item>
       <title>お名前.comとCloudflareでSSL対応</title>
