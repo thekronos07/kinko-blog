@@ -13,10 +13,10 @@
     
     <item>
       <title>画像圧縮をGulpとTinyPNG APIで自動化しよう！</title>
-      <link>https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/</link>
+      <link>https://kinko25.tech/blog/gulp_tinypng/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/</guid>
+      <guid>https://kinko25.tech/blog/gulp_tinypng/</guid>
       <description>画像圧縮を自動化しよう！ 大量の画像を圧縮していくのって面倒。 前回の更新から大分、経ってしまいました。。。
 今回は、画像圧縮について
 画像を圧縮して、サイズ容量を減らすことでサイトの表示速度に大きく影響します。

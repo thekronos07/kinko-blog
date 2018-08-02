@@ -1,11 +1,3 @@
-
-
-
-    
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
@@ -18,10 +10,10 @@
              "@type": "WebPage",
              "@id": "https://kinko25.tech/"
         },
-        "articleSection" : "tags",
-        "name" : "Gitコマンド",
-        "headline" : "Gitコマンド",
-        "description" : "",
+        "articleSection" : "blog",
+        "name" : "画像圧縮をGulpとTinyPNG APIで自動化しよう！",
+        "headline" : "画像圧縮をGulpとTinyPNG APIで自動化しよう！",
+        "description" : "大量の画像を圧縮していくのって面倒。",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -29,15 +21,17 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-07-04 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-07-04 00:00:00 &#43;0000 UTC",
-        "url" : "https://kinko25.tech/tags/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/",
-        "wordCount" : "0",
-        "keywords" : [ "Blog" ]
+        "datePublished": "2018-08-01 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-08-01 00:00:00 &#43;0000 UTC",
+        "url" : "https://kinko25.tech/blog/gulp_tinypng/",
+        "wordCount" : "108",
+        "keywords" : [ "Gulp","Node.js","画像圧縮","Blog" ]
     }
     </script>
         
-            <title>Gitコマンド - FE異世界物語</title>
+            
+                <title>画像圧縮をGulpとTinyPNG APIで自動化しよう！</title>
+            
         
 
         <meta charset="utf-8" />
@@ -70,17 +64,17 @@
         <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati152.png" sizes="152x152">
 
         
+            <meta name="author" content="kinko25">
         
-            
-                <meta name="description" content="フロントエンド周りのことについて書いていきます。">
-            
+        
+            <meta name="description" content="大量の画像を圧縮していくのって面倒。">
         
 
         <meta property="og:type" content="website">
 <meta property="og:title" content="FE異世界物語">
-<meta property="og:url" content="https://kinko25.tech/tags/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/">
+<meta property="og:url" content="https://kinko25.tech/blog/gulp_tinypng/">
 <meta property="og:site_name" content="FE異世界物語">
-<meta property="og:description" content="フロントエンド周りのことについて書いていきます。">
+<meta property="og:description" content="大量の画像を圧縮していくのって面倒。">
 <meta property="og:image" content="https://kinko25.tech/img/ogp/ogp.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
@@ -88,9 +82,17 @@
 <meta name="twitter:creator" content="@thekronos07">
 
         
-<meta itemprop="name" content="Gitコマンド">
-<meta itemprop="description" content="フロントエンド周りのことについて書いていきます。">
+<meta itemprop="name" content="画像圧縮をGulpとTinyPNG APIで自動化しよう！">
+<meta itemprop="description" content="大量の画像を圧縮していくのって面倒。">
 
+
+<meta itemprop="datePublished" content="2018-08-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-08-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="108">
+
+
+
+<meta itemprop="keywords" content="Gulp,Node.js,画像圧縮," />
 
         
 
@@ -144,6 +146,7 @@ if (!doNotTrack) {
       <div id="wrapper">
 
     
+    
 <header id="header">
     
       
@@ -169,6 +172,10 @@ if (!doNotTrack) {
     </nav>
     <nav class="main">
         <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
             
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
@@ -441,57 +448,85 @@ if (!doNotTrack) {
         
 </section>
 
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fkinko25.tech%2fblog%2fgulp_tinypng%2f&amp;text=%e7%94%bb%e5%83%8f%e5%9c%a7%e7%b8%ae%e3%82%92Gulp%e3%81%a8TinyPNG%20API%e3%81%a7%e8%87%aa%e5%8b%95%e5%8c%96%e3%81%97%e3%82%88%e3%81%86%ef%bc%81&amp;via=thekronos07" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkinko25.tech%2fblog%2fgulp_tinypng%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by kinko25&amp;body=https%3a%2f%2fkinko25.tech%2fblog%2fgulp_tinypng%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
     
     <div id="main">
-        <h1>Gitコマンド</h1>
         
         
-            <article class="post">
-  
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" class="image featured">
-            <img src="https://kinko25.tech/img/2018/07/pic03.jpg" alt="">
-        </a>
-    
-
-
-  
+        <article class="post">
   <header>
     <div class="title">
         
-            <h2><a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/">GitとGithubの違いについて</a></h2>
+            <h1><a href="https://kinko25.tech/blog/gulp_tinypng/">画像圧縮をGulpとTinyPNG APIで自動化しよう！</a></h1>
+            
         
         
-            <p>GitとGithubの違いとは？</p>
+            <p>大量の画像を圧縮していくのって面倒。</p>
         
     </div>
     <div class="meta">
         
 
         <time class="published"
-            datetime='2018-07-04'>
-            July 4, 2018</time>
+            datetime='2018-08-01'>
+            August 1, 2018</time>
         <span class="author">kinko25</span>
         
             <p>1 minute read</p>
@@ -500,12 +535,189 @@ if (!doNotTrack) {
     </div>
 </header>
 
-  <p>パッと答えられる人は、普段でgitを使っているのではないだろうか。</p>
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fkinko25.tech%2fblog%2fgulp_tinypng%2f&amp;text=%e7%94%bb%e5%83%8f%e5%9c%a7%e7%b8%ae%e3%82%92Gulp%e3%81%a8TinyPNG%20API%e3%81%a7%e8%87%aa%e5%8b%95%e5%8c%96%e3%81%97%e3%82%88%e3%81%86%ef%bc%81&amp;via=thekronos07" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkinko25.tech%2fblog%2fgulp_tinypng%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by kinko25&amp;body=https%3a%2f%2fkinko25.tech%2fblog%2fgulp_tinypng%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/gulp_tinypng/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/08/pic06.png" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<h1 id="画像圧縮を自動化しよう">画像圧縮を自動化しよう！</h1>
+
+<h2 id="大量の画像を圧縮していくのって面倒">大量の画像を圧縮していくのって面倒。</h2>
+
+<p>前回の更新から大分、経ってしまいました。。。</p>
+
+<p>今回は、画像圧縮について</p>
+
+<p>画像を圧縮して、サイズ容量を減らすことでサイトの表示速度に大きく影響します。</p>
+
+<p>表示速度を軽視してる人が多いので、そういう人は3G回線で生活してみてはどうでしょう。</p>
+
+<p>ストレスでしかないと思いますｗ</p>
+
+<p>それでは、大量の画像圧縮を一回のコマンドを叩くだけで500枚まで圧縮する方法をご紹介したい。</p>
+
+<h2 id="どうやって圧縮するか">どうやって圧縮するか？</h2>
+
+<p>実際、どうやって圧縮するのかはいろんなやり方がありますが、</p>
+
+<p>今回は、gulpと画像圧縮で有名な「TinyPNG」のAPIを使って行きます。
+TinyPNGと言っても、名前すら覚えてない人がおおいので、
+パンダのやつって言えばわかると思います。</p>
+
+<h2 id="tinypng-apiを取得しよう">TinyPNG APIを取得しよう。</h2>
+
+<p>下記、リンク先でメールアドレスを入力して「Get your API key」を押しましょう。</p>
+
+<p><a href="https://tinypng.com/developers">https://tinypng.com/developers</a></p>
+
+<p>APIキーが取得出来たら、メモ帳などにコピペしておいてください。</p>
+
+<h2 id="圧縮するための準備をする">圧縮するための準備をする</h2>
+
+<pre><code>環境
+Windows7
+Node.js 最新版 ※Nodeは予め、インストールしておきましょう。
+gulp 3系
+</code></pre>
+
+<p>Macならターミナル、Windowsならgitbashなどを開いてください。</p>
+
+<p>あとは下記コマンドを叩きまくっていけばいけます。</p>
+
+<pre><code>$ pwd
+$ ls -la
+$ mkdir tpng
+$ cd tpng
+$ mkdir img
+$ mkdir tpng_img
+$ npm init
+$ npm install gulp
+$ npm install gulp-tinypng-compress
+$ touch gulpfile.js
+
+## ここでgulpfile.jsをエディターで開きましょう
+## 開いたら下記の内容をコピペ。
+###################################################
+var gulp = require('gulp')
+var tinyping = require('gulp-tinypng-compress')
+
+// TinyPNG APIを使用した画像圧縮
+gulp.task('tpng', function() {
+  gulp
+    .src('./img/**/*.{png,jpg,jpeg}')
+    .pipe(
+      tinyping({
+        key: 'APIキー' // TinyPNGのAPI Keyを入力
+      })
+    )
+    .pipe(gulp.dest('./tpng_img'))
+})
+###################################################
+
+$ gulp tpng
+</code></pre>
+
+<p>これで動けばあとはコンパイルを待つだけです。</p>
+
+<p>「動かない」、「壊れた」など言ってる人は出直してください。</p>
+
+<h2 id="最後に">最後に</h2>
+
+<p>ブラウザ上のTiny PNGに一枚一枚画像ぶん投げてるのを見ると、めっちゃ非効率でイケてないと思うので、</p>
+
+<p>gulpコマンド叩いて圧縮が終わるまで、のんびり他の事に時間を費やすことをオススメします。</p>
+
+<p>それでは、GulpとTiny PNG APIを使った画像自動圧縮については、この辺で。</p>
+
+<p>ありがとうございました。</p>
+
+  </div>
+
   <footer>
-    <ul class="actions">
-      <li><a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" class="button big">Continue Reading</a></li>
-    </ul>
-  <ul class="stats">
+    <ul class="stats">
   <li class="categories">
     <ul>
         
@@ -514,13 +726,13 @@ if (!doNotTrack) {
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="https://kinko25.tech/categories/git">Git</a></li>
+                <li><a class="article-category-link" href="https://kinko25.tech/categories/gulp">Gulp</a></li>
                 
                 
-                <li><a class="article-category-link" href="https://kinko25.tech/categories/github">Github</a></li>
+                <li><a class="article-category-link" href="https://kinko25.tech/categories/node.js">Node.js</a></li>
                 
                 
-                <li><a class="article-category-link" href="https://kinko25.tech/categories/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">Gitコマンド</a></li>
+                <li><a class="article-category-link" href="https://kinko25.tech/categories/%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE">画像圧縮</a></li>
                 
             
         
@@ -534,13 +746,13 @@ if (!doNotTrack) {
                 <i class="fa fa-tags"></i>
                 
                 
-                <li><a class="article-category-link" href="https://kinko25.tech/tags/git">Git</a></li>
+                <li><a class="article-category-link" href="https://kinko25.tech/tags/gulp">Gulp</a></li>
                 
                 
-                <li><a class="article-category-link" href="https://kinko25.tech/tags/github">Github</a></li>
+                <li><a class="article-category-link" href="https://kinko25.tech/tags/node.js">Node.js</a></li>
                 
                 
-                <li><a class="article-category-link" href="https://kinko25.tech/tags/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">Gitコマンド</a></li>
+                <li><a class="article-category-link" href="https://kinko25.tech/tags/%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE">画像圧縮</a></li>
                 
             
         
@@ -549,20 +761,19 @@ if (!doNotTrack) {
 </ul>
 
   </footer>
+
 </article>
 
-        
 
-        
 <ul class="actions pagination">
     
-        <li><a href="#" class="disabled button big previous">Previous Page</a></li>
+        <li><a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/"
+                class="button big previous">お名前.comとCloudflareでSSL対応</a></li>
     
 
     
-        <li><a href="#" class="disabled button big next">Next Page</a></li>
-    
 </ul>
+
 
     </div>
     
@@ -586,7 +797,7 @@ if (!doNotTrack) {
       <ul class="icons">
         
           
-    <li><a href="https://kinko25.tech/tags/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+    <li><a href="https://kinko25.tech/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
 
 
         
@@ -808,7 +1019,7 @@ if (!doNotTrack) {
         
 
         <a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/" class="image featured">
-            <img src="https://kinko25.tech/img/2018/07/pic04.png" alt="">
+            <img src="https://kinko25.tech/img//pic04.png" alt="">
         </a>
     
 
@@ -1125,7 +1336,7 @@ if (!doNotTrack) {
       <ul class="icons">
         
           
-    <li><a href="https://kinko25.tech/tags/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+    <li><a href="https://kinko25.tech/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
 
 
         
