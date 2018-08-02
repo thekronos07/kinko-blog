@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kinko25.tech/blog/%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE%E3%82%92%E4%B8%80%E6%8B%AC%E8%87%AA%E5%8B%95%E5%8C%96/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/</loc>
     <lastmod>2018-07-06T00:00:00+00:00</lastmod>
   </url>
@@ -65,7 +70,7 @@
   
   <url>
     <loc>https://kinko25.tech/blog/</loc>
-    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -113,7 +118,7 @@
   
   <url>
     <loc>https://kinko25.tech/</loc>
-    <lastmod>2018-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -166,6 +171,18 @@
   </url>
   
   <url>
+    <loc>https://kinko25.tech/tags/gulp/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kinko25.tech/categories/gulp/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kinko25.tech/tags/html5/</loc>
     <lastmod>2018-07-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -204,6 +221,18 @@
   <url>
     <loc>https://kinko25.tech/itemized/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kinko25.tech/tags/node.js/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kinko25.tech/categories/node.js/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -251,6 +280,18 @@
   
   <url>
     <loc>https://kinko25.tech/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kinko25.tech/tags/%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kinko25.tech/categories/%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE/</loc>
+    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
