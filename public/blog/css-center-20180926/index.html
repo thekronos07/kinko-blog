@@ -1,0 +1,1628 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https://kinko25.tech/"
+        },
+        "articleSection" : "blog",
+        "name" : "中央寄せにしたい時のCSSテクニック集",
+        "headline" : "中央寄せにしたい時のCSSテクニック集",
+        "description" : "色んなやり方で、中央寄せにする方法をご紹介。",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-09-27 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-09-27 00:00:00 &#43;0000 UTC",
+        "url" : "https://kinko25.tech/blog/css-center-20180926/",
+        "wordCount" : "289",
+        "keywords" : [ "CSS","CSSテクニック","Blog" ]
+    }
+    </script>
+        
+            
+                <title>中央寄せにしたい時のCSSテクニック集</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.42.1" />
+        
+  
+    
+  
+
+  
+
+  <link rel="apple-touch-icon-precomposed" href='https://kinko25.tech/favicon/apple-touch-icon-precomposed.png'>
+  <link rel="icon" href='https://kinko25.tech/favicon/favicon.ico'>
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content='/favicon/mstile.png'>
+  <meta name="application-name" content="FE異世界物語">
+  <meta name="msapplication-tooltip" content="フロントエンド周りのことについて書いていきます。">
+  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
+
+
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati57.png" sizes="57x57">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati60.png" sizes="60x60">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati72.png" sizes="72x72">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati76.png" sizes="76x76">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati114.png" sizes="114x114">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati144.png" sizes="144x144">
+        <link rel="apple-touch-icon" href="https://kinko25.tech/img/etc/ati152.png" sizes="152x152">
+
+        
+            <meta name="author" content="kinko25">
+        
+        
+            <meta name="description" content="色んなやり方で、中央寄せにする方法をご紹介。">
+        
+
+        <meta property="og:type" content="website">
+<meta property="og:title" content="FE異世界物語">
+<meta property="og:url" content="https://kinko25.tech/blog/css-center-20180926/">
+<meta property="og:site_name" content="FE異世界物語">
+<meta property="og:description" content="色んなやり方で、中央寄せにする方法をご紹介。">
+<meta property="og:image" content="https://kinko25.tech/img/ogp/ogp.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site:id" content="@thekronos07">
+<meta name="twitter:creator" content="@thekronos07">
+
+        
+<meta itemprop="name" content="中央寄せにしたい時のCSSテクニック集">
+<meta itemprop="description" content="色んなやり方で、中央寄せにする方法をご紹介。">
+
+
+<meta itemprop="datePublished" content="2018-09-27T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-09-27T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="289">
+
+
+
+<meta itemprop="keywords" content="CSS,CSSテクニック," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://kinko25.tech/css/main.css">
+            <link rel="stylesheet" href="https://kinko25.tech/css/add-on.css">
+            <link rel="stylesheet" href="https://kinko25.tech/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-103935601-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <script> (adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-9543988496970572", enable_page_level_ads: true }); </script>
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      
+      <h1><a href="https://kinko25.tech/">FE異世界物語</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="https://kinko25.tech/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>ブログトップ
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://kinko25.tech/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>問合せ
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="https://kinko25.tech/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="https://kinko25.tech/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="https://kinko25.tech/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>ブログトップ
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://kinko25.tech/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>問合せ
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/css-center-20180926/">中央寄せにしたい時のCSSテクニック集</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-09-27'>
+                                    September 27, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/css-center-20180926/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/09/pic07.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/gulp_tinypng/">画像圧縮をGulpとTinyPNG APIで自動化しよう！</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-08-01'>
+                                    August 1, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/gulp_tinypng/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/08/pic06.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/">お名前.comとCloudflareでSSL対応</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-07-06'>
+                                    July 6, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic05.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/">使用していないCSSを簡単に探す方法</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-07-05'>
+                                    July 5, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic04.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/">GitとGithubの違いについて</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-07-04'>
+                                    July 4, 2018</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic03.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fkinko25.tech%2fblog%2fcss-center-20180926%2f&amp;text=%e4%b8%ad%e5%a4%ae%e5%af%84%e3%81%9b%e3%81%ab%e3%81%97%e3%81%9f%e3%81%84%e6%99%82%e3%81%aeCSS%e3%83%86%e3%82%af%e3%83%8b%e3%83%83%e3%82%af%e9%9b%86&amp;via=thekronos07" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkinko25.tech%2fblog%2fcss-center-20180926%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by kinko25&amp;body=https%3a%2f%2fkinko25.tech%2fblog%2fcss-center-20180926%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://kinko25.tech/blog/css-center-20180926/">中央寄せにしたい時のCSSテクニック集</a></h1>
+            
+        
+        
+            <p>色んなやり方で、中央寄せにする方法をご紹介。</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2018-09-27'>
+            September 27, 2018</time>
+        <span class="author">kinko25</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fkinko25.tech%2fblog%2fcss-center-20180926%2f&amp;text=%e4%b8%ad%e5%a4%ae%e5%af%84%e3%81%9b%e3%81%ab%e3%81%97%e3%81%9f%e3%81%84%e6%99%82%e3%81%aeCSS%e3%83%86%e3%82%af%e3%83%8b%e3%83%83%e3%82%af%e9%9b%86&amp;via=thekronos07" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkinko25.tech%2fblog%2fcss-center-20180926%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by kinko25&amp;body=https%3a%2f%2fkinko25.tech%2fblog%2fcss-center-20180926%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/css-center-20180926/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/09/pic07.png" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    
+
+<h1 id="中央寄せにしたい時の様々なcssテクニック集">中央寄せにしたい時の様々なCSSテクニック集</h1>
+
+<h2 id="中央寄せについて">中央寄せについて</h2>
+
+<p>前回の記事からだいぶ期間が空いてしまいました。。。。</p>
+
+<p>今回は、中央寄せのやり方についての記事となります。</p>
+
+<p>私も時々、忘れてしまいググることが多いので、
+まとめておきたいと思います。</p>
+
+<p>上から順番に
+・左右中央寄せのやりかた
+・上下中央寄せのやりかた
+・上下左右中央寄せのやりかた</p>
+
+<p>上記の3つを抑えておけば、だいたいの案件では困らないかと。</p>
+
+<h2 id="左右中央寄せにするやり方">左右中央寄せにするやり方</h2>
+
+<h3 id="①text-align-centerで画像を左右中央寄せ">①text-align:centerで画像を左右中央寄せ</h3>
+
+<p>デモ：<a href="https://codepen.io/thekronos07/pen/JmPRwj">https://codepen.io/thekronos07/pen/JmPRwj</a></p>
+
+<pre><code>HTML:
+&lt;p class=&quot;thumb&quot;&gt;
+  &lt;img src=&quot;https://dummyimage.com/600x400/000/fff&quot;&gt;
+&lt;/p&gt;
+
+CSS:
+.thumb {
+  text-align: center;
+}
+img {
+  /* reset.css */
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+</code></pre>
+
+<h3 id="②marginを使ったやり方で画像を左右中央寄せ">②marginを使ったやり方で画像を左右中央寄せ</h3>
+
+<p>デモ：<a href="https://codepen.io/thekronos07/pen/NOKREy">https://codepen.io/thekronos07/pen/NOKREy</a></p>
+
+<pre><code>HTML:
+&lt;p class=&quot;thumb&quot;&gt;
+  &lt;img src=&quot;https://dummyimage.com/600x400/000/fff&quot;&gt;
+&lt;/p&gt;
+
+CSS:
+.thumb {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  /* reset.css */
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+</code></pre>
+
+<h3 id="③marginを使ったやり方で左右中央寄せ">③marginを使ったやり方で左右中央寄せ</h3>
+
+<p>デモ：<a href="https://codepen.io/thekronos07/pen/zmOKjX">https://codepen.io/thekronos07/pen/zmOKjX</a></p>
+
+<pre><code>HTML:
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;div class=&quot;contents&quot;&gt;
+    &lt;h2&gt;タイトル&lt;/h2&gt;
+    &lt;p&gt;内容&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+CSS:
+.wrapper {
+  width: 100%;
+  background-color: #cccccc;
+}
+.contents {
+  width: 250px;
+  background-color: #008000;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+</code></pre>
+
+<h3 id="④positonを使ったやり方で左右中央寄せ">④positonを使ったやり方で左右中央寄せ</h3>
+
+<p>デモ：<a href="https://codepen.io/thekronos07/pen/dgbpjY">https://codepen.io/thekronos07/pen/dgbpjY</a></p>
+
+<pre><code>HTML:
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;div class=&quot;contents&quot;&gt;
+    &lt;h2&gt;タイトル&lt;/h2&gt;
+    &lt;p&gt;内容&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+CSS:
+.wrapper {
+  width: 100%;
+  height: 800px;
+  background-color: #cccccc;
+  position: relative;
+}
+.contents {
+  width: 950px;
+  max-width: 950px;
+  height: 500px;
+  background-color: #008000;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* X軸 マイナス50% */
+}
+</code></pre>
+
+<h2 id="上下中央寄せにするやり方">上下中央寄せにするやり方</h2>
+
+<h3 id="①positonを使ったやり方で上下中央寄せ">①positonを使ったやり方で上下中央寄せ</h3>
+
+<p>デモ：<a href="https://codepen.io/thekronos07/pen/bmbwzL">https://codepen.io/thekronos07/pen/bmbwzL</a></p>
+
+<pre><code>HTML:
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;div class=&quot;contents&quot;&gt;
+    &lt;h2&gt;タイトル&lt;/h2&gt;
+    &lt;p&gt;内容&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+CSS:
+.wrapper {
+  width: 100%;
+  height: 500px;
+  background-color: #cccccc;
+  position: relative;
+}
+.contents {
+  width: 100px;
+  height: 100px;
+  background-color: #008000;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Y軸 マイナス50% */
+}
+</code></pre>
+
+<h2 id="上下左右中央寄せにするやり方">上下左右中央寄せにするやり方</h2>
+
+<h3 id="①flexを使ったやり方で上下左右中央寄せ">①flexを使ったやり方で上下左右中央寄せ</h3>
+
+<p>デモ：<a href="https://codepen.io/thekronos07/pen/MPgjpG">https://codepen.io/thekronos07/pen/MPgjpG</a></p>
+
+<pre><code>HTML:
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;div class=&quot;contents&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+CSS:
+.wrapper {
+  width: 100%;
+  height: 550px;
+  background-color: #cccccc;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.contents {
+  /* テキストのみの場合は、text-align: center;でok */
+  width: 250px;
+  height: 250px;
+  background-color: #333333;
+  margin-left: auto;
+  margin-right: auto;
+}
+</code></pre>
+
+<h3 id="②positonを使ったやり方で左右中央寄せ">②positonを使ったやり方で左右中央寄せ</h3>
+
+<p>デモ：<a href="https://codepen.io/thekronos07/pen/mzbrgW">https://codepen.io/thekronos07/pen/mzbrgW</a></p>
+
+<pre><code>HTML:
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;div class=&quot;contents&quot;&gt;
+    &lt;h2&gt;タイトル&lt;/h2&gt;
+    &lt;p&gt;内容&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+CSS:
+.wrapper {
+  width: 100%;
+  height: 500px;
+  background-color: #cccccc;
+  position: relative;
+}
+.contents {
+  width: 100px;
+  height: 100px;
+  background-color: #008000;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); /* X軸とY軸 マイナス50% */
+}
+</code></pre>
+
+<h2 id="最後に">最後に</h2>
+
+<p>パッと思いつく対処はこれくらいですが、
+中央寄せにmargin-left:-200px;みたいな指定をされてるのを見るので、
+そういうのは、あまりしてほしくないですよね。</p>
+
+<p>という感じで、今回は簡単に中央寄せのやり方をまとめてみました！
+解説付きで、もっと詳しく知りたいという方は下記のリンク先でご覧ください。</p>
+
+<p>CSSで中央寄せする9つの方法（縦・横にセンタリング）</p>
+
+<p><a href="https://saruwakakun.com/html-css/basic/centering#section1">https://saruwakakun.com/html-css/basic/centering#section1</a></p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/categories/css">CSS</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/categories/css%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF">CSSテクニック</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/tags/css">CSS</a></li>
+                
+                
+                <li><a class="article-category-link" href="https://kinko25.tech/tags/css%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF">CSSテクニック</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://kinko25.tech/blog/gulp_tinypng/"
+                class="button big previous">画像圧縮をGulpとTinyPNG APIで自動化しよう！</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='https://kinko25.tech/'><img src="https://kinko25.tech/img/main/icon.png" class="intro-circle" width="150" alt="icon" /></a>
+      
+    
+    
+      <header>
+        <h2>kinko25</h2>
+        <p>元フロントエンドエンジニア <br>現在は、HTMLコーダー</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="https://kinko25.tech/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/thekronos07" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/thekronos07" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:thekronos07@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/css-center-20180926/">中央寄せにしたい時のCSSテクニック集</a>
+              </h3>
+              
+              <time class="published" datetime='2018-09-27'>
+                September 27, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/css-center-20180926/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/09/pic07.png" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/gulp_tinypng/">画像圧縮をGulpとTinyPNG APIで自動化しよう！</a>
+              </h3>
+              
+              <time class="published" datetime='2018-08-01'>
+                August 1, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/gulp_tinypng/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/08/pic06.png" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/">お名前.comとCloudflareでSSL対応</a>
+              </h3>
+              
+              <time class="published" datetime='2018-07-06'>
+                July 6, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E3%81%8A%E5%90%8D%E5%89%8D.com%E3%81%A8cloudflare%E3%81%A7ssl%E5%AF%BE%E5%BF%9C/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic05.png" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/">使用していないCSSを簡単に探す方法</a>
+              </h3>
+              
+              <time class="published" datetime='2018-07-05'>
+                July 5, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84css%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E6%8E%A2%E3%81%99%E6%96%B9%E6%B3%95/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic04.png" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/">GitとGithubの違いについて</a>
+              </h3>
+              
+              <time class="published" datetime='2018-07-04'>
+                July 4, 2018
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="https://kinko25.tech/blog/git%E3%81%A8github%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF/" class="image featured">
+            <img src="https://kinko25.tech/img/2018/07/pic03.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="https://kinko25.tech/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                Uncategorized
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/github/">Github</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/github-pages/">Github Pages</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/hugo/">Hugo</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/css/">CSS</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/chrome/">Chrome</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/css%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/">CSSテクニック</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/cloudflare/">Cloudflare</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/git/">Git</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/git%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/">Gitコマンド</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/gulp/">Gulp</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/html5/">HTML5</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/html5-video%E3%82%BF%E3%82%B0/">HTML5 VIDEOタグ</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/node.js/">Node.js</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/ssl%E5%AF%BE%E5%BF%9C/">SSL対応</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/%E3%81%8A%E5%90%8D%E5%89%8D.com/">お名前.com</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB/">デベロッパーツール</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="https://kinko25.tech/categories/%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE/">画像圧縮</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="https://kinko25.tech/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/thekronos07" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/thekronos07" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:thekronos07@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2018
+        
+          FE異世界物語
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://kinko25.tech/js/util.js"></script>
+      <script src="https://kinko25.tech/js/main.js"></script>
+      <script src="https://kinko25.tech/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

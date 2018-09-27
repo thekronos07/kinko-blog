@@ -6,7 +6,7 @@
     <description>Recent content in Tags on FE異世界物語</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 05 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kinko25.tech/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>CSS</title>
       <link>https://kinko25.tech/tags/css/</link>
-      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://kinko25.tech/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSSテクニック</title>
+      <link>https://kinko25.tech/tags/css%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/tags/css%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/</guid>
       <description></description>
     </item>
     
