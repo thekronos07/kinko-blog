@@ -23,8 +23,11 @@ type = "post"
 まとめておきたいと思います。
 
 上から順番に
+
 ・左右中央寄せのやりかた
+
 ・上下中央寄せのやりかた
+
 ・上下左右中央寄せのやりかた
 
 上記の3つを抑えておけば、だいたいの案件では困らないかと。
@@ -32,7 +35,9 @@ type = "post"
 ## 左右中央寄せにするやり方
 ### ①text-align:centerで画像を左右中央寄せ
 
-デモ：https://codepen.io/thekronos07/pen/JmPRwj
+デモ：
+
+https://codepen.io/thekronos07/pen/JmPRwj
 
 ```
 HTML:
@@ -54,7 +59,9 @@ img {
 
 ### ②marginを使ったやり方で画像を左右中央寄せ
 
-デモ：https://codepen.io/thekronos07/pen/NOKREy
+デモ：
+
+https://codepen.io/thekronos07/pen/NOKREy
 
 ```
 HTML:
@@ -78,7 +85,9 @@ img {
 
 ### ③marginを使ったやり方で左右中央寄せ
 
-デモ：https://codepen.io/thekronos07/pen/zmOKjX
+デモ：
+
+https://codepen.io/thekronos07/pen/zmOKjX
 
 ```
 HTML:
@@ -105,7 +114,9 @@ CSS:
 
 ### ④positonを使ったやり方で左右中央寄せ
 
-デモ：https://codepen.io/thekronos07/pen/dgbpjY
+デモ：
+
+https://codepen.io/thekronos07/pen/dgbpjY
 
 ```
 HTML:
@@ -139,7 +150,9 @@ CSS:
 ## 上下中央寄せにするやり方
 ### ①positonを使ったやり方で上下中央寄せ
 
-デモ：https://codepen.io/thekronos07/pen/bmbwzL
+デモ：
+
+https://codepen.io/thekronos07/pen/bmbwzL
 
 ```
 HTML:
@@ -173,7 +186,9 @@ CSS:
 ## 上下左右中央寄せにするやり方
 ### ①flexを使ったやり方で上下左右中央寄せ
 
-デモ：https://codepen.io/thekronos07/pen/MPgjpG
+デモ：
+
+https://codepen.io/thekronos07/pen/MPgjpG
 
 ```
 HTML:
@@ -203,7 +218,9 @@ CSS:
 
 ### ②positonを使ったやり方で左右中央寄せ
 
-デモ：https://codepen.io/thekronos07/pen/mzbrgW
+デモ：
+
+https://codepen.io/thekronos07/pen/mzbrgW
 
 ```
 HTML:
@@ -235,10 +252,14 @@ CSS:
 
 ## 最後に
 パッと思いつく対処はこれくらいですが、
+
 中央寄せにmargin-left:-200px;みたいな指定をされてるのを見るので、
+
 そういうのは、あまりしてほしくないですよね。
 
 という感じで、今回は簡単に中央寄せのやり方をまとめてみました！
+
+
 解説付きで、もっと詳しく知りたいという方は下記のリンク先でご覧ください。
 
 
