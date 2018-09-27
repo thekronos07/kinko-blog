@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSSテクニック on FE異世界物語</title>
+    <link>https://kinko25.tech/tags/css%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/</link>
+    <description>Recent content in CSSテクニック on FE異世界物語</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kinko25.tech/tags/css%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>中央寄せにしたい時のCSSテクニック集</title>
+      <link>https://kinko25.tech/blog/css-center-20180926/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/blog/css-center-20180926/</guid>
+      <description>中央寄せにしたい時の様々なCSSテクニック集 中央寄せについて 前回の記事からだいぶ期間が空いてしまいました。。。。
+今回は、中央寄せのやり方についての記事となります。
+私も時々、忘れてしまいググることが多いので、 まとめておきたいと思います。
+上から順番に ・左右中央寄せのやりかた ・上下中央寄せのやりかた ・上下左右中央寄せのやりかた
+上記の3つを抑えておけば、だいたいの案件では困らないかと。
+左右中央寄せにするやり方 ①text-align:centerで画像を左右中央寄せ デモ：https://codepen.io/thekronos07/pen/JmPRwj
+HTML: &amp;lt;p class=&amp;quot;thumb&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://dummyimage.com/600x400/000/fff&amp;quot;&amp;gt; &amp;lt;/p&amp;gt; CSS: .thumb { text-align: center; } img { /* reset.css */ max-width: 100%; height: auto; vertical-align: middle; }  ②marginを使ったやり方で画像を左右中央寄せ デモ：https://codepen.io/thekronos07/pen/NOKREy
+HTML: &amp;lt;p class=&amp;quot;thumb&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://dummyimage.com/600x400/000/fff&amp;quot;&amp;gt; &amp;lt;/p&amp;gt; CSS: .thumb { width: 250px; margin-left: auto; margin-right: auto; } img { /* reset.css */ max-width: 100%; height: auto; vertical-align: middle; }  ③marginを使ったやり方で左右中央寄せ デモ：https://codepen.</description>
+    </item>
+    
+  </channel>
+</rss>
