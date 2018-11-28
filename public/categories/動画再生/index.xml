@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>動画再生 on FE異世界物語</title>
+    <link>https://kinko25.tech/categories/%E5%8B%95%E7%94%BB%E5%86%8D%E7%94%9F/</link>
+    <description>Recent content in 動画再生 on FE異世界物語</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 28 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kinko25.tech/categories/%E5%8B%95%E7%94%BB%E5%86%8D%E7%94%9F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>スマホで無音動画を使用する方法</title>
+      <link>https://kinko25.tech/blog/sp-mp4-20181128/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kinko25.tech/blog/sp-mp4-20181128/</guid>
+      <description>スマホで無音動画を使用する方法 さようなら、GIFアニメーション 担当案件が全部片付いたので、久々の更新となります。
+今回は、iphoneで動画を再生する方法について書きます。
+担当した案件で PCサイトでは動画を使用し、 SPサイトではGifアニメーションを使用していたサイトがありました。
+スマホ(主にiPhone)で、動画が使えなかったという理由で 前任の担当者はGifアニメーションを使用していたようです。 ※Androidでは、普通に再生できていました。
+Gifアニメーションを２つ読み込んでいるせいで、 サイトはめっちゃ重たくてかなりのストレスでした。
+videoタグに一手間加えるだけ。 下記、サンプルソースをご覧頂ければわかるかと思いますが、 「playsinline」というのをvideoタグに追加しています。 見たことないですよね。 「playsinline」が無いと、iPhoneではそもそも表示すらしてくれません。
+サンプルソース：
+HTML: &amp;lt;video playsinline muted autoplay loop&amp;gt; &amp;lt;source src=&amp;quot;movie/sample.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt; &amp;lt;/video&amp;gt;  最後に 「playsinline」を追加するだけで解決できるので、 スマホサイトでも動画を使用したい場合に試してみてください。 解説付きで、もっと詳しく知りたいという方は下記のリンク先でご覧ください。
+モバイルブラウザのビデオ再生がいろいろ変わるので確かめてみた
+https://qiita.com/tomoyukilabs/items/cb9dd1d3e7eb0cc7f58a</description>
+    </item>
+    
+  </channel>
+</rss>
